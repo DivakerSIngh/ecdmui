@@ -1,0 +1,9 @@
+{
+  "editor.rulers": [
+    1000
+  ],
+  "html.format.wrapAttributes": "preserve-aligned",
+  "html.format.wrapLineLength": 1000,
+  "editor.formatOnPaste": true 
+ 
+}

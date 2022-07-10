@@ -1,0 +1,739 @@
+<breadcrumb></breadcrumb>
+<div class="matero-row dashboard-page" fxLayout="row wrap">
+  <div class="matero-col" fxFlex.gt-sm="70" fxFlex="100">
+    <div class="matero-row" fxLayout="row wrap">
+  
+      <!--Welcome User-->
+      <div class="matero-col" fxFlex.gt-sm="100" fxFlex="100">
+      <div class="user-scope">
+        <img src="../../../assets/images/image-05.png">
+        <p>Welcome, Nasir Jamal !</p>
+    </div>
+  </div>
+  <!--Ends Welcome User-->
+
+      <!--Announcements-->
+      <div class="matero-col" fxFlex.gt-sm="50" fxFlex="100">
+        <mat-card class="custom-card announcements">
+          <div fxLayout="row" class="b-b-1 m-b-8 m-l--8 p-r-4 p-l-8 m-r--8 p-b-8">
+            <div tag-flex tag-flex-wrap class="default-footer matero-row form-field" fxFlex.gt-sm="100" fxFlex="100">
+              <div class="matero-col" fxFlex.gt-sm="50" fxFlex=100>
+                <mat-card-title>{{'238'| translate}}</mat-card-title>
+              </div>
+              <div class="matero-col" fxFlex.gt-sm="50" fxFlex=100>
+                <div fxLayoutAlign="end center">
+                  <button type="button" mat-raised-button color="primary">
+                    {{'239'| translate}}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <mat-card-content>
+            <ul>
+              <li>
+                <span>Dec 11, 2019 at 1:34 pm</span>
+                <strong>Policy Update</strong>
+                <p>Email signatures: One Common Look</p>
+              </li>
+              <li>
+                <span>Dec 7, 2019 at 12:34 pm</span>
+                <strong>Campus Batch Recruitment 2020</strong>
+                <p>Like every year, campus batch hiring has been a great part of talent acquisition by MIND.</p>
+              </li>
+              <li>
+                <span>Dec 6, 2019 at 4:34 pm</span>
+                <strong>Sham-e-Mehfil at MIND</strong>
+                <p>Sham-e-Mehfil Season 4, a cultural event is organized in MIND Campus, Noida, India.</p>
+              </li>
+            </ul>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+      <!--Requests-->
+      <div class="matero-col" fxFlex.gt-sm="50" fxFlex="100">
+        <mat-card class="custom-card requests">
+          <mat-card-content>
+            <mat-tab-group class="m--8">
+              <mat-tab label="{{'240'| translate}}">
+                <div class="chart-scope text-center">
+                  <img src="../../../assets/images/graph-01.jpg">
+                </div>
+                <div class="leave-request">
+                  <span>Leave Requests</span>
+                  <i>23/65</i>
+                  <easy-progress [value]="30"></easy-progress>
+                </div>
+                <div class="reimbursement-request">
+                  <span>Reimbursement</span>
+                  <i>20/40</i>
+                  <easy-progress [value]="60"></easy-progress>
+                </div>
+                <div class="late-request">
+                  <span>Late Coming / Early Leaving</span>
+                  <i>4/14</i>
+                  <easy-progress [value]="40"></easy-progress>
+                </div>
+              </mat-tab>
+              <mat-tab label="{{'241'| translate}}">
+
+
+              </mat-tab>
+            </mat-tab-group>
+
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+      <!--Leave Details-->
+      <div class="matero-col" fxFlex.gt-sm="50" fxFlex="100">
+        <mat-card class="custom-card leaves-box">
+          <div fxLayout="row" class="b-b-1 m-b-8 m-l--8 p-r-4 p-l-8 m-r--8 p-b-8">
+            <div tag-flex tag-flex-wrap class="default-footer matero-row form-field" fxFlex.gt-sm="100" fxFlex="100">
+              <div class="matero-col" fxFlex.gt-sm="50" fxFlex=100>
+                <mat-card-title>{{'242'| translate}}</mat-card-title>
+              </div>
+              <div class="matero-col" fxFlex.gt-sm="50" fxFlex=100>
+                <div fxLayoutAlign="end center">
+                  <button type="button" mat-raised-button color="primary">
+                    {{'243'| translate}}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <mat-card-content>
+            <div class="matero-row" fxLayout="row wrap">
+              <div class="matero-col" fxFlex.gt-sm="33.33" fxFlex="100">
+                <div class="leave-scope">
+                  <img src="../../../assets/images/graph-02.jpg">
+                  <span><strong><i>7.5</i>/10</strong>Casual Leave</span>
+                </div>
+              </div>
+              <div class="matero-col" fxFlex.gt-sm="33.33" fxFlex="100">
+                <div class="leave-scope">
+                  <img src="../../../assets/images/graph-03.jpg">
+                  <span><strong><i>10</i>/15</strong>Privilege Leave</span>
+                </div>
+              </div>
+              <div class="matero-col" fxFlex.gt-sm="33.33" fxFlex="100">
+                <div class="leave-scope">
+                  <img src="../../../assets/images/graph-04.jpg">
+                  <span><strong><i>0</i>/5</strong>Block Leave</span>
+                </div>
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+      <!--My Trainings-->
+      <div class="matero-col" fxFlex.gt-sm="50" fxFlex="100">
+        <mat-card class="custom-card trainings">
+          <div fxLayout="row" class="b-b-1 m-b-8 m-l--8 p-r-4 p-l-8 m-r--8 p-b-8">
+            <div tag-flex tag-flex-wrap class="default-footer matero-row form-field" fxFlex.gt-sm="100" fxFlex="100">
+              <div class="matero-col" fxFlex.gt-sm="50" fxFlex=100>
+                <mat-card-title>{{'244'| translate}}</mat-card-title>
+              </div>
+              <div class="matero-col" fxFlex.gt-sm="50" fxFlex=100>
+                <div fxLayoutAlign="end center">
+                  <button type="button" mat-raised-button color="primary">
+                    {{'239'| translate}}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <mat-card-content>
+            <ul>
+              <li class="behaviorial">
+                <div class="time">
+                  <span><strong>08</strong>Hrs</span>
+                  <span class="badge">BehV</span>
+                </div>
+                <div class="contents">
+                  <span>Dec 11, 2019 at 1:34 pm</span>
+                  <p>Time Management</p>
+                </div>
+              </li>
+
+              <li class="behaviorial">
+                <div class="time">
+                  <span><strong>08</strong>Hrs</span>
+                  <span class="badge">BehV</span>
+                </div>
+                <div class="contents">
+                  <span>Dec 11, 2019 at 1:34 pm</span>
+                  <p>Design Thinking Workshop</p>
+                </div>
+              </li>
+
+              <li class="technical">
+                <div class="time">
+                  <span><strong>08</strong>Hrs</span>
+                  <span class="badge">TECH</span>
+                </div>
+                <div class="contents">
+                  <span>Dec 11, 2019 at 1:34 pm</span>
+                  <p>GETTING STARTED WITH MCWORX 32 SCADA - 2</p>
+                </div>
+              </li>
+            </ul>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+      <!--Jobs-->
+      <div class="matero-col" fxFlex.gt-sm="100" fxFlex="100">
+        <mat-card class="custom-card jobs">
+          <mat-card-content>
+            <mat-tab-group class="m--8">
+              <mat-tab label="{{'245'| translate}}">
+                <div fxLayout="row wrap">
+                  <div class="matero-col m-b-16" fxFlex.gt-sm="33.33" fxFlex="100">
+                    <div class="box job1">
+                      <button mat-icon-button>
+                        <mat-icon>{{'247'| translate}}</mat-icon>
+                      </button>
+                      <h6>SQL Developer</h6>
+                      <p>SQL, SQL Server</p>
+                      <div class="matero-row" fxLayout="row wrap">
+                        <div class="matero-col" fxFlex.gt-sm="50" fxFlex="100">
+                          <span class="type">Technology</span>
+                        </div>
+                        <div class="matero-col" fxFlex.gt-sm="50" fxFlex="100">
+                          <div fxLayoutAlign="end center"><span>Exp: 3 - 6 Yrs</span></div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="matero-col m-b-16" fxFlex.gt-sm="33.33" fxFlex="100">
+                    <div class="box job2">
+                      <button mat-icon-button>
+                        <mat-icon>{{'247'| translate}}</mat-icon>
+                      </button>
+                      <h6>SSE</h6>
+                      <p>ASP.Net, MVC, C#, SQL Server</p>
+                      <div class="matero-row" fxLayout="row wrap">
+                        <div class="matero-col" fxFlex.gt-sm="50" fxFlex="100">
+                          <span class="type">Technology</span>
+                        </div>
+                        <div class="matero-col" fxFlex.gt-sm="50" fxFlex="100">
+                          <div fxLayoutAlign="end center"><span>Exp: 3 - 6 Yrs</span></div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="matero-col m-b-16" fxFlex.gt-sm="33.33" fxFlex="100">
+                    <div class="box job3">
+                      <button mat-icon-button>
+                        <mat-icon>{{'247'| translate}}</mat-icon>
+                      </button>
+                      <h6>Manager</h6>
+                      <p>MBA</p>
+                      <div class="matero-row" fxLayout="row wrap">
+                        <div class="matero-col" fxFlex.gt-sm="50" fxFlex="100">
+                          <span class="type">Marketing</span>
+                        </div>
+                        <div class="matero-col" fxFlex.gt-sm="50" fxFlex="100">
+                          <div fxLayoutAlign="end center"><span>Exp: 3 - 6 Yrs</span></div>
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </div>
+                  <div class="matero-col" fxFlex.gt-sm="33.33" fxFlex="100">
+
+                    <div class="box job4">
+                      <button mat-icon-button>
+                        <mat-icon>{{'247'| translate}}</mat-icon>
+                      </button>
+                      <h6>Project Leader</h6>
+                      <p>Oracle Apps-Functional & Technical</p>
+                      <div class="matero-row" fxLayout="row wrap">
+                        <div class="matero-col" fxFlex.gt-sm="50" fxFlex="100">
+                          <span class="type">Technology</span>
+                        </div>
+                        <div class="matero-col" fxFlex.gt-sm="50" fxFlex="100">
+                          <div fxLayoutAlign="end center"><span>Exp: 3 - 6 Yrs</span></div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="matero-col" fxFlex.gt-sm="33.33" fxFlex="100">
+                    <div class="box job5">
+                      <button mat-icon-button>
+                        <mat-icon>{{'247'| translate}}</mat-icon>
+                      </button>
+                      <h6>Sales Manager</h6>
+                      <p>MBA</p>
+                      <div class="matero-row" fxLayout="row wrap">
+                        <div class="matero-col" fxFlex.gt-sm="50" fxFlex="100">
+                          <span class="type">Sales</span>
+                        </div>
+                        <div class="matero-col" fxFlex.gt-sm="50" fxFlex="100">
+                          <div fxLayoutAlign="end center"><span>Exp: 3 - 6 Yrs</span></div>
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </div>
+                  <div class="matero-col" fxFlex.gt-sm="33.33" fxFlex="100">
+
+                    <div class="box job6">
+                      <button mat-icon-button>
+                        <mat-icon>{{'247'| translate}}</mat-icon>
+                      </button>
+                      <h6>SE</h6>
+                      <p>Java</p>
+                      <div class="matero-row" fxLayout="row wrap">
+                        <div class="matero-col" fxFlex.gt-sm="50" fxFlex="100">
+                          <span class="type">Technology</span>
+                        </div>
+                        <div class="matero-col" fxFlex.gt-sm="50" fxFlex="100">
+                          <div fxLayoutAlign="end center"><span>Exp: 3 - 6 Yrs</span></div>
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </div>
+              </mat-tab>
+              <mat-tab label="{{'246'| translate}}">
+
+
+              </mat-tab>
+            </mat-tab-group>
+
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+      <!--Document Center-->
+      <div class="matero-col" fxFlex.gt-sm="100" fxFlex="100">
+        <mat-card class="custom-card documents">
+          <div fxLayout="row" class="b-b-1 m-b-8 m-l--8 p-r-4 p-l-8 m-r--8 p-b-8">
+            <div tag-flex tag-flex-wrap class="default-footer matero-row form-field" fxFlex.gt-sm="100" fxFlex="100">
+              <div class="matero-col" fxFlex.gt-sm="50" fxFlex=100>
+                <mat-card-title>{{'238'| translate}}</mat-card-title>
+              </div>
+              <div class="matero-col" fxFlex.gt-sm="50" fxFlex=100>
+                <div fxLayoutAlign="end center">
+                  <button type="button" mat-raised-button color="primary">
+                    {{'239'| translate}}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <mat-card-content>
+            <div fxLayout="row wrap">
+              <div class="matero-col" fxFlex.gt-sm="50" fxFlex="100">
+                <ul>
+                  <li>
+                    <mat-icon>{{'250'| translate}}</mat-icon>
+                    <a href="#">Employee Policies</a>
+                  </li>
+                  <li>
+                    <mat-icon>{{'250'| translate}}</mat-icon>
+                    <a href="#">Mediclaim Policies</a>
+                  </li>
+                  <li>
+                    <mat-icon>{{'250'| translate}}</mat-icon>
+                    <a href="#">MIND New Policies</a>
+                  </li>
+                  <li>
+                    <mat-icon>{{'250'| translate}}</mat-icon>
+                    <a href="#">Circulars</a>
+                  </li>
+                  <li>
+                    <mat-icon>{{'250'| translate}}</mat-icon>
+                    <a href="#"> Organisation Plan</a>
+                  </li>
+                  <li>
+                    <mat-icon>{{'250'| translate}}</mat-icon>
+                    <a href="#"> Knowledge Enabler Group</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="matero-col" fxFlex.gt-sm="50" fxFlex="100">
+                <ul>
+                  <li>
+                    <mat-icon>{{'250'| translate}}</mat-icon>
+                    <a href="#">Holiday Calendar</a>
+                  </li>
+                  <li>
+                    <mat-icon>{{'250'| translate}}</mat-icon>
+                    <a href="#">Roles & Responsibilities</a>
+                  </li>
+                  <li>
+                    <mat-icon>{{'250'| translate}}</mat-icon>
+                    <a href="#">Dress Code</a>
+                  </li>
+                  <li>
+                    <mat-icon>{{'250'| translate}}</mat-icon>
+                    <a href="#">eMPRO Easy</a>
+                  </li>
+                  <li>
+                    <mat-icon>{{'250'| translate}}</mat-icon>
+                    <a href="#"> Training Materials</a>
+                  </li>
+                  <li>
+                    <mat-icon>{{'250'| translate}}</mat-icon>
+                    <a href="#"> Travel</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!--Important Notification-->
+  <div class="matero-col" fxFlex.gt-sm="30" fxFlex="100">
+    <div class="highlight-box">
+    <mat-card class="custom-card notification">
+      <mat-card-content>
+        <button mat-icon-button>
+          <mat-icon>close</mat-icon>
+        </button>
+        <span>Important Notification</span>
+        <h6>General</h6>
+        <p>The Office (MIND - Noida) will be closed on tomorrow Jan 09,2020.</p>
+      </mat-card-content>
+    </mat-card>
+
+    <!--Events-->
+    <mat-card class="custom-card events">
+      <mat-card-content>
+        <div fxLayout="row wrap">
+          <div class="matero-col" fxFlex.gt-sm="30" fxFlex="100">
+            <span>Wednesday <strong>18</strong></span>
+          </div>
+          <div fxFlex.gt-sm="70" fxFlex="100">
+            <div class="contents">
+              <ul>
+                <li>
+                  <mat-icon>stop</mat-icon>11:30 AM | Event 1
+                </li>
+                <li>
+                  <mat-icon>stop</mat-icon>02:30 PM | Training - Giving & Receiving Feedbacks
+                </li>
+                <li>
+                  <mat-icon>stop</mat-icon>04:30 AM | Meeting (AMS) - 4th Floor Meeting Room
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+   
+
+    <!--Birthday and Anniversary-->
+    <mat-card class="custom-card birthday" (click)="openFieldPanel()">
+      <mat-card-content>
+        <div fxLayout="row wrap">
+          <div class="matero-col" fxFlex.gt-sm="50" fxFlex="100">
+            <div class="designBadge border-right">
+              <div class="badgeIcon">
+                <i>
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    x="0px" y="0px" viewBox="0 0 28.8 28.3" style="enable-background:new 0 0 28.8 28.3;"
+                    xml:space="preserve" width="28" height="28">
+                    <path style="fill:#AC10ED" d="M22.4,7.4c0.9,0,1.7-0.8,1.7-1.7V2.1h-3.4v3.6C20.7,6.7,21.4,7.4,22.4,7.4C22.4,7.4,22.4,7.4,22.4,7.4z
+M22.4,4.2c0.8,0,1.5,0.7,1.5,1.5c0,0.8-0.7,1.5-1.5,1.5c-0.8,0-1.5-0.7-1.5-1.5C20.9,4.9,21.6,4.2,22.4,4.2L22.4,4.2z" />
+                    <path style="fill:#AC10ED" d="M6.4,7.4c0.9,0,1.7-0.8,1.7-1.7V2.1H4.7v3.6C4.7,6.7,5.4,7.4,6.4,7.4z M6.4,4.2c0.8,0,1.5,0.7,1.5,1.5
+S7.2,7.2,6.4,7.2c-0.8,0-1.5-0.7-1.5-1.5C4.9,4.9,5.6,4.2,6.4,4.2L6.4,4.2z" />
+                    <path style="fill:#AC10ED" d="M19.6,17.1c-0.9,0.9-2.4,1-3.3,0.1c0,0-0.1-0.1-0.1-0.1c-0.9,1-2.4,1-3.3,0.1c0,0-0.1-0.1-0.1-0.1
+c-0.9,0.9-2.4,1-3.3,0.1c0,0-0.1-0.1-0.1-0.1c-0.8,0.8-2.1,1-3,0.4v5h16.4v-5C21.6,18.1,20.3,17.9,19.6,17.1z M7.6,21.8
+c-0.5,0-1-0.4-1-1c0-0.5,0.4-1,1-1c0.5,0,1,0.4,1,1C8.5,21.4,8.1,21.8,7.6,21.8C7.6,21.8,7.6,21.8,7.6,21.8L7.6,21.8z M11,21.8
+c-0.5,0-1-0.4-1-1c0-0.5,0.4-1,1-1c0.5,0,1,0.4,1,1C11.9,21.4,11.5,21.8,11,21.8L11,21.8z M14.3,21.8c-0.5,0-1-0.4-1-1c0,0,0,0,0,0
+l0,0c0-0.5,0.4-1,1-1s1,0.4,1,1C15.3,21.4,14.9,21.8,14.3,21.8z M17.7,21.8c-0.5,0-1-0.4-1-1c0-0.5,0.4-1,1-1c0.5,0,1,0.4,1,1
+C18.7,21.4,18.3,21.8,17.7,21.8L17.7,21.8z M22.1,20.8c0,0.5-0.4,1-1,1s-1-0.4-1-1c0-0.5,0.4-1,1-1C21.7,19.9,22.1,20.3,22.1,20.8
+C22.1,20.8,22.1,20.8,22.1,20.8L22.1,20.8z" />
+                    <path style="fill:#AC10ED" d="M26,6.1h-1.1c-0.2,1.4-1.5,2.3-2.9,2.1c-1.1-0.2-1.9-1-2.1-2.1h-11C8.7,7.5,7.4,8.5,6,8.2
+C4.9,8.1,4,7.2,3.9,6.1H2.8C1.2,6.1,0,7.4,0,8.9l0,0v16.6c0,1.5,1.2,2.8,2.8,2.8c0,0,0,0,0,0H26c1.5,0,2.8-1.2,2.8-2.8c0,0,0,0,0,0
+V8.9C28.8,7.4,27.5,6.1,26,6.1C26,6.1,26,6.1,26,6.1z M24.6,24.2c0,0.5-0.4,1-1,1c0,0,0,0,0,0H5.2c-0.5,0-1-0.4-1-1c0,0,0,0,0,0
+v-1.4c0-0.2,0.2-0.4,0.4-0.4h0.7v-6.6c0-0.7,0.6-1.3,1.3-1.3c0,0,0,0,0,0h3.3v-1.1c-0.7-0.2-1.1-1-0.9-1.7c0,0,0,0,0,0
+c0-0.1,0.1-0.3,0.2-0.4l0.8-1.2c0.1-0.2,0.4-0.2,0.6-0.1c0,0,0,0,0,0c0,0,0.1,0.1,0.1,0.1l0.8,1.2c0.4,0.6,0.3,1.5-0.4,1.9
+c0,0,0,0,0,0c-0.1,0.1-0.2,0.1-0.3,0.2v1.1H14v-1.1c-0.7-0.2-1.1-1-0.9-1.7c0,0,0,0,0,0c0-0.1,0.1-0.3,0.2-0.4l0.8-1.2
+c0.1-0.2,0.4-0.2,0.6-0.1c0,0,0,0,0,0c0,0,0.1,0.1,0.1,0.1l0.8,1.2c0.4,0.5,0.3,1.3-0.2,1.7c-0.1,0.1-0.3,0.3-0.5,0.3v1.1H18v-1.1
+c-0.7-0.2-1.1-1-0.9-1.7c0,0,0,0,0,0c0-0.1,0.1-0.3,0.2-0.4l0.8-1.2c0.1-0.2,0.4-0.2,0.6-0.1c0,0,0,0,0,0c0,0,0.1,0.1,0.1,0.1
+l0.8,1.2c0.4,0.6,0.3,1.5-0.4,1.9c0,0,0,0,0,0c-0.1,0.1-0.2,0.1-0.3,0.2v1.1h3.2c0.7,0,1.3,0.6,1.3,1.3l0,0v6.6h0.7
+c0.2,0,0.4,0.2,0.4,0.4L24.6,24.2z" />
+                    <path style="fill:#AC10ED"
+                      d="M21.2,20.7c0.1,0,0.2,0.1,0.2,0.2c0,0.1-0.1,0.2-0.2,0.2c-0.1,0-0.2-0.1-0.2-0.2C21,20.8,21.1,20.7,21.2,20.7z
+M7.5,17c0.6,0,1.1-0.3,1.4-0.8c0.1-0.2,0.4-0.3,0.6-0.2c0.1,0,0.1,0.1,0.2,0.2c0.4,0.7,1.3,1,2.1,0.7c0.3-0.1,0.5-0.4,0.7-0.7
+c0.1-0.2,0.4-0.3,0.6-0.2c0.1,0,0.1,0.1,0.2,0.1c0,0,0,0,0,0c0.4,0.7,1.3,1,2,0.7c0,0,0,0,0,0c0.3-0.1,0.5-0.4,0.6-0.6
+c0.1-0.2,0.4-0.3,0.6-0.2c0.1,0,0.1,0.1,0.2,0.2l0,0c0.4,0.7,1.3,1,2,0.7c0,0,0,0,0,0c0.3-0.1,0.5-0.4,0.6-0.6c0,0,0,0,0,0
+c0.1-0.2,0.4-0.3,0.6-0.2c0.1,0,0.1,0.1,0.2,0.2c0.4,0.7,1.3,1,2,0.7c0.3-0.1,0.5-0.3,0.6-0.6v-0.4c0-0.3-0.2-0.5-0.5-0.5l0,0
+l-15.4,0c-0.3,0-0.5,0.2-0.5,0.5v0.4C6.4,16.7,6.9,17,7.5,17z M17.8,20.7c0.1,0,0.2,0.1,0.2,0.2c0,0.1-0.1,0.2-0.2,0.2
+c-0.1,0-0.2-0.1-0.2-0.2C17.6,20.8,17.7,20.7,17.8,20.7z M10,12.5c0.2,0.1,0.5,0.1,0.7-0.1l0,0c0.2-0.2,0.2-0.5,0.1-0.7l-0.4-0.6
+l-0.4,0.6C9.7,12,9.8,12.3,10,12.5C10,12.5,10,12.5,10,12.5z M22.4,5.1c0.3,0,0.6,0.3,0.6,0.6c0,0.3-0.3,0.6-0.6,0.6
+s-0.6-0.3-0.6-0.6C21.8,5.4,22,5.1,22.4,5.1z M6.4,5.1C6.7,5.1,7,5.4,7,5.7c0,0.3-0.3,0.6-0.6,0.6C6,6.3,5.7,6.1,5.7,5.7
+C5.7,5.4,6,5.1,6.4,5.1z M14.1,12.5c0.1,0.1,0.2,0.1,0.3,0.1c0.3,0,0.5-0.2,0.5-0.5c0,0,0,0,0,0c0-0.1,0-0.2-0.1-0.3l-0.4-0.6
+l-0.4,0.6C13.8,12,13.8,12.4,14.1,12.5z M18.1,12.5c0.2,0.1,0.5,0.1,0.7-0.1l0,0c0.2-0.2,0.2-0.5,0.1-0.7l-0.4-0.6l-0.4,0.6
+C17.8,12,17.8,12.3,18.1,12.5C18.1,12.5,18.1,12.5,18.1,12.5z M5,24.2c0,0.1,0.1,0.2,0.2,0.2h18.4c0.1,0,0.2-0.1,0.2-0.2v-1H5V24.2z
+M0.9,0h27v1.3h-27V0z M14.4,20.7c0.1,0,0.2,0.1,0.2,0.2c0,0.1-0.1,0.2-0.2,0.2c-0.1,0-0.2-0.1-0.2-0.2
+C14.2,20.8,14.3,20.7,14.4,20.7z M11,20.7c-0.1,0-0.2,0.1-0.2,0.2l0,0c0,0.1,0.1,0.2,0.2,0.2c0.1,0,0.2-0.1,0.2-0.2S11,20.7,11,20.7
+L11,20.7z M7.6,20.7c-0.1,0-0.2,0.1-0.2,0.2l0,0c0,0.1,0.1,0.2,0.2,0.2c0.1,0,0.2-0.1,0.2-0.2S7.6,20.7,7.6,20.7L7.6,20.7z" />
+                  </svg>
+
+                </i>
+              </div>
+              <span><strong>08</strong> Birthday</span>
+            </div>
+          </div>
+          <div class="matero-col" fxFlex.gt-sm="50" fxFlex="100">
+            <div class="designBadge">
+              <div class="badgeIcon">
+                <i>
+
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    x="0px" y="0px" viewBox="0 0 28.2 26.8" style="enable-background:new 0 0 28.2 26.8;"
+                    xml:space="preserve" width="28" height="28">
+                    <path style="fill:#EF4056" d="M14.1,6.9c1.5-0.7,2.9-1.7,4-3c0.4-0.4,0.6-1,0.6-1.6c0-1.3-1-2.3-2.3-2.3c-1-0.1-2,0.5-2.3,1.5
+c0,0.2,0,0.2-0.1,0c-0.3-1-1.2-1.6-2.3-1.5c-1.3,0-2.3,1-2.3,2.3c0,0.6,0.2,1.2,0.6,1.6C11.3,5.2,12.6,6.2,14.1,6.9z M17.8,11.2
+c-0.9,0.1-1.8,0.4-2.5,0.9c2.7,3,2.4,7.6-0.6,10.3s-7.6,2.4-10.3-0.6S1.9,14.2,5,11.6c1.3-1.2,3-1.8,4.8-1.9
+c0.7-0.9,1.6-1.6,2.5-2.2C7,6.2,1.6,9.3,0.3,14.6s1.8,10.6,7.1,11.9s10.6-1.8,11.9-7.1C20.1,16.6,19.5,13.6,17.8,11.2L17.8,11.2z
+M18.4,7.2c-5.4,0-9.8,4.4-9.8,9.9c0,2.1,0.7,4.1,1.9,5.7c0.9-0.1,1.8-0.4,2.5-0.9c-2.7-3-2.4-7.6,0.6-10.3s7.6-2.4,10.3,0.6
+s2.4,7.6-0.6,10.3c-1.3,1.2-3,1.8-4.8,1.9c-0.7,0.9-1.6,1.6-2.5,2.2c5.3,1.3,10.6-1.8,11.9-7.1S26.1,8.8,20.8,7.5
+C20,7.3,19.2,7.2,18.4,7.2L18.4,7.2z" />
+                  </svg>
+                </i>
+              </div>
+              <span><strong>08</strong> Anniversary</span>
+            </div>
+          </div>
+
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+ <!--Team Pulse-->
+ <mat-card class="custom-card teams">
+  <mat-card-content>
+    <div fxLayout="row wrap">
+      <span class="sentiments">Mood/Sentiment</span>
+      <div class="matero-col" fxFlex.gt-sm="40" fxFlex="100">
+        <span>Team <strong>Pulse</strong></span>
+      </div>
+      <div class="matero-col" fxFlex.gt-sm="60" fxFlex="100">
+        <div class="contents">
+          <img src="../../../assets/images/moods.jpg">
+          <p>Your team members are feeling great today !</p>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+
+
+    <!--Badges-->
+    <mat-card class="custom-card badge-scope">
+      <mat-card-content>
+        <div fxLayout="row wrap">
+          <div class="matero-col" fxFlex.gt-sm="33.33" fxFlex="100">
+            <div class="designBadge border-right">
+              <div class="badgeIcon">
+                <i><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    x="0px" y="0px" viewBox="0 0 45.2 45" style="enable-background:new 0 0 45.2 45;"
+                    xml:space="preserve" width="36" height="36">
+                    <path style="fill:#007d91;" d="M1.4,45h2.1c0.4,0,0.9-0.2,1.1-0.6c0.2,0,0.3,0.1,0.5,0.1c0.1,0,0.1,0,0.2,0c0.3,0.2,0.5,0.3,0.8,0.4
+                       C6.3,45,6.4,45,6.6,45h6.1c1.3,0,2.3-1.1,2.3-2.3c0-0.1,0-0.2,0-0.3c0.4-0.4,0.6-1,0.6-1.5c0-0.2,0-0.3,0-0.5
+                       c0.3-0.4,0.5-0.9,0.5-1.4c0-0.2,0-0.3-0.1-0.5c0.3-0.4,0.4-0.9,0.4-1.3c0-1.2-1-2.2-2.2-2.2c0,0-0.1,0-0.1,0h-2.7
+                       c0.1-0.5,0.2-1,0.2-1.6c-0.1-0.9-0.3-2.9-1.8-3.6c-0.3-0.2-0.7-0.3-1.1-0.3c0,0-0.1,0-0.1,0c-0.5,0-1,0.2-1.4,0.6
+                       c-0.6,0.6-0.9,1.5-0.8,2.4c0,0.1,0,0.7,0,0.7c-0.2,0.5-1,2-1.3,2.5l0,0.1c0-0.8-0.6-1.4-1.4-1.4H1.4C0.6,34.4,0,35,0,35.8
+                       c0,0,0,0,0,0v7.8C0,44.4,0.6,45,1.4,45L1.4,45z M4.9,37.7c0.3-0.2,0.6-0.4,0.9-0.6c0.1-0.3,1.9-3.1,1.9-3.7v-0.6
+                       c0-0.6-0.1-1.2,0.3-1.7c0.1-0.1,0.3-0.2,0.6-0.3h0c0.2,0,0.3,0,0.4,0.1c0.7,0.4,0.9,1.7,1,2.5c-0.1,1-0.3,1.9-0.6,2.8h4.5
+                       c0.4-0.1,0.8,0.3,0.9,0.7c0,0,0,0.1,0,0.1c0,0.5-0.4,0.9-0.9,0.9h-0.2c0.4,0.1,0.8,0.5,0.7,0.9c0,0.5-0.4,0.9-0.9,0.9h-0.4
+                       c0.5,0.1,0.9,0.5,0.8,1c0,0.5-0.4,0.8-0.9,0.8h-0.5c0.5,0.1,0.9,0.5,0.8,1c0,0.5-0.4,0.8-0.9,0.8H6.6c-0.3-0.1-0.5-0.4-0.8-0.5
+                       c-0.1,0-0.1,0-0.2,0c-0.2,0-0.4,0-0.6,0L4.9,37.7z" />
+                    <path style="fill:#007d91;" d="M43.8,34.4h-2.1c-0.8,0-1.4,0.6-1.4,1.4l0-0.1c-0.3-0.5-1.1-2-1.3-2.5v-0.4c0-0.1,0-0.2,0-0.3
+                       c0.1-0.9-0.2-1.8-0.8-2.4c-0.4-0.4-0.9-0.6-1.4-0.6c0,0-0.1,0-0.1,0c-0.4,0-0.7,0.1-1.1,0.3c-1.5,0.7-1.7,2.7-1.8,3.6
+                       c0,0.5,0.1,1.1,0.2,1.6h-2.7C30,34.8,29,35.8,29,37c0,0,0,0.1,0,0.1c0,0.5,0.1,0.9,0.4,1.3c0,0.2-0.1,0.3-0.1,0.5
+                       c0,0.5,0.2,1,0.5,1.4c0,0.2,0,0.3,0,0.5c0,0.6,0.2,1.1,0.6,1.5c0,0.1,0,0.2,0,0.3c0,1.3,1,2.3,2.3,2.3h6.1c0.1,0,0.3,0,0.4-0.1
+                       c0.3-0.1,0.6-0.2,0.8-0.4c0.1,0,0.1,0,0.2,0c0.2,0,0.3,0,0.5-0.1c0.3,0.4,0.7,0.6,1.1,0.6h2.1c0.8,0,1.4-0.6,1.4-1.4v-7.8
+                       C45.2,35,44.6,34.4,43.8,34.4z M40.3,43.1c-0.2,0-0.4,0-0.6,0c-0.1,0-0.1,0-0.2,0c-0.3,0.1-0.5,0.4-0.8,0.5h-6.1
+                       c-0.5,0-0.9-0.5-0.9-1c0-0.5,0.4-0.8,0.8-0.9H32c-0.5,0-0.9-0.5-0.9-1c0-0.5,0.4-0.8,0.8-0.9h-0.4c-0.5,0-0.9-0.4-0.9-0.9
+                       c0-0.4,0.3-0.8,0.7-0.9h-0.2c-0.5,0-0.9-0.4-0.9-0.9c0-0.4,0.3-0.8,0.8-0.8c0,0,0.1,0,0.1,0h4.5c-0.3-0.9-0.5-1.9-0.6-2.8
+                       c0.1-0.8,0.2-2.1,1-2.5c0.1-0.1,0.3-0.1,0.4-0.1h0c0.2,0,0.4,0.1,0.6,0.3c0.5,0.4,0.3,1.1,0.3,1.7v0.6c0,0.6,1.8,3.4,1.9,3.7
+                       c0.3,0.2,0.6,0.4,0.9,0.6L40.3,43.1z" />
+                    <path style="fill:#007d91;" d="M22.5,0C28.3,0,33,4.7,33,10.5S28.3,21,22.5,21S12,16.3,12,10.5S16.7,0,22.5,0z M3.2,30.7c0-6,4.2-10,10.5-10
+                       h2.7c-0.7-0.4-1.3-0.9-1.9-1.4h-0.8c-7.1,0-11.9,4.6-11.9,11.4V33h1.4V30.7z M30.7,19.2c-0.6,0.5-1.2,1-1.9,1.4h2.7
+                       c6.3,0,10.5,4,10.5,10V33h1.4v-2.3c0-6.8-4.8-11.4-11.9-11.4H30.7z M21.5,36.5L21.5,36.5c0.6,0.5,1.5,0.5,2.1,0.1l2.4-2.1
+                       c0.7-0.5,1-1.3,0.8-2.2L25,22.2l0,0c-0.2,0-0.5,0.1-0.7,0.1h0c-1.1,0.2-2.1,0.2-3.2,0h0c-0.2,0-0.5-0.1-0.7-0.1l-2,10
+                       c-0.2,0.8,0.2,1.7,0.8,2.2L21.5,36.5z" />
+                  </svg></i>
+                <span>45</span> </div>
+              Kudos Received
+            </div>
+          </div>
+          <div class="matero-col" fxFlex.gt-sm="33.33" fxFlex="100">
+            <div class="designBadge border-right">
+              <div class="badgeIcon">
+                <i>
+                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    x="0px" y="0px" viewBox="0 0 42.9 45.4" style="enable-background:new 0 0 42.9 45.4;"
+                    xml:space="preserve" width="36" height="36">
+                    <path style="fill:#007d91;" d="M37.9,0H14.7c-2.8,0-5,2.2-5,5v12.4c0,0.3,0,0.6,0.1,0.9c0.1,0.3,0.3,0.5,0.5,0.6l2.4-2.4c1.2-1.2,3-1.2,4.2,0
+	s1.2,3,0,4.2l-1.6,1.6c0.3,0,0.6,0.1,0.9,0.1h12.3c0.1,0,0.2,0,0.3,0.1l7.6,4.7v-4.2c0-0.3,0.2-0.5,0.5-0.5l0,0h1c2.8,0,5-2.2,5-5V5
+	C42.9,2.2,40.7,0,37.9,0z M19.3,8.1l-1.1,1.1c0,0.1-0.1,0.1-0.1,0.2l0.3,1.5c0,0.2,0,0.4-0.1,0.6c-0.1,0.1-0.3,0.2-0.5,0.2
+	c-0.1,0-0.3,0-0.4-0.1L16,10.9c0,0-0.1,0-0.1,0c0,0-0.1,0-0.1,0l-1.3,0.7c-0.1,0.1-0.2,0.1-0.4,0.1c-0.2,0-0.4-0.1-0.5-0.2
+	c-0.1-0.2-0.2-0.4-0.1-0.6l0.3-1.5c0-0.1,0-0.2-0.1-0.2l-1.1-1.1c-0.3-0.2-0.3-0.7-0.1-1c0.1-0.1,0.3-0.2,0.5-0.2l1.5-0.2
+	c0.1,0,0.1-0.1,0.2-0.1l0.7-1.4c0.1-0.3,0.5-0.5,0.9-0.4c0.2,0.1,0.3,0.2,0.4,0.4l0.7,1.4c0,0.1,0.1,0.1,0.2,0.1l1.5,0.2
+	c0.4,0,0.7,0.3,0.6,0.7C19.5,7.8,19.4,8,19.3,8.1L19.3,8.1z M32.7,10.6l-2.1,2.1c-0.2,0.2-0.3,0.6-0.3,0.9l0.5,3
+	c0.1,0.3,0,0.6-0.2,0.8c-0.1,0.2-0.4,0.3-0.6,0.3c-0.2,0-0.4-0.1-0.5-0.1l-2.7-1.4c-0.3-0.1-0.6-0.1-0.9,0l-2.7,1.4
+	c-0.4,0.2-0.8,0.2-1.1-0.1c-0.2-0.2-0.2-0.5-0.2-0.8l0.5-3c0-0.3-0.1-0.6-0.3-0.9L20,10.6c-0.4-0.3-0.5-0.8-0.2-1.2
+	c0.2-0.2,0.4-0.3,0.7-0.3l3-0.4c0.3-0.1,0.6-0.3,0.8-0.5l1.3-2.7c0.2-0.4,0.6-0.7,1.1-0.5C26.8,5,27,5.2,27.1,5.4l1.3,2.7
+	c0.2,0.3,0.4,0.5,0.8,0.5l3,0.4c0.5,0,0.8,0.4,0.8,0.9C33,10.2,32.9,10.5,32.7,10.6L32.7,10.6z M40.1,8.1L39,9.1
+	C39,9.2,39,9.3,39,9.4l0.3,1.5c0,0.2,0,0.4-0.1,0.6c-0.1,0.1-0.3,0.2-0.5,0.2c-0.1,0-0.3,0-0.4-0.1l-1.3-0.7c0,0-0.1,0-0.1,0
+	c0,0-0.1,0-0.1,0l-1.3,0.7c-0.1,0.1-0.2,0.1-0.4,0.1c-0.2,0-0.4-0.1-0.5-0.2c-0.1-0.2-0.2-0.4-0.1-0.6l0.3-1.5c0-0.1,0-0.2-0.1-0.2
+	l-1.1-1.1c-0.3-0.2-0.3-0.7-0.1-1c0.1-0.1,0.3-0.2,0.5-0.2l1.5-0.2c0.1,0,0.1-0.1,0.2-0.1l0.7-1.4c0.1-0.3,0.5-0.5,0.9-0.4
+	c0.2,0.1,0.3,0.2,0.4,0.4L38,6.5c0,0.1,0.1,0.1,0.2,0.1l1.5,0.2c0.4,0,0.7,0.3,0.6,0.7C40.4,7.8,40.3,8,40.1,8.1z" />
+                    <path style="fill:#007d91;" d="M27.5,8.6l-1.2-2.5l-1.2,2.5c-0.3,0.6-0.9,1-1.5,1.1l-2.7,0.4l2,1.9c0.5,0.5,0.7,1.1,0.6,1.8l-0.5,2.7l2.4-1.3
+	c0.6-0.3,1.3-0.3,1.9,0l2.4,1.3l-0.5-2.7c-0.1-0.7,0.1-1.3,0.6-1.8l2-1.9l-2.7-0.4C28.4,9.5,27.9,9.1,27.5,8.6z M37.1,7l-0.4-0.8
+	L36.4,7c-0.2,0.4-0.5,0.6-1,0.7l-0.9,0.1l0.6,0.6c0.3,0.3,0.4,0.7,0.4,1.1l-0.1,0.9l0.8-0.4c0.4-0.2,0.8-0.2,1.2,0l0.8,0.4L38,9.5
+	c-0.1-0.4,0.1-0.8,0.4-1.1L39,7.8l-0.9-0.1C37.7,7.6,37.3,7.3,37.1,7z M1.7,26.6c-0.9,0-1.7,0.8-1.7,1.7l0,0v15.4
+	c0,0.9,0.8,1.7,1.7,1.7c0.9,0,1.7-0.8,1.7-1.7c0,0,0,0,0,0V28.3C3.4,27.4,2.6,26.6,1.7,26.6C1.7,26.6,1.7,26.6,1.7,26.6z M16.3,7
+	l-0.4-0.8L15.5,7c-0.2,0.4-0.5,0.6-1,0.7l-0.9,0.1l0.6,0.6c0.3,0.3,0.4,0.7,0.4,1.1l-0.1,0.9l0.8-0.4c0.4-0.2,0.8-0.2,1.2,0l0.8,0.4
+	l-0.1-0.9c-0.1-0.4,0.1-0.8,0.4-1.1l0.6-0.6l-0.9-0.1C16.8,7.6,16.5,7.3,16.3,7z M16.8,18.6c0-1.1-0.9-1.9-1.9-1.9
+	c-0.5,0-1,0.2-1.4,0.6L4,26.8c0.3,0.4,0.5,1,0.5,1.5v14.3c0,0,0,0,0,0c0,1.5,1.2,2.7,2.7,2.7H21c1.1,0,1.9-0.9,1.9-1.9
+	c0-1.1-0.9-1.9-1.9-1.9c0,0,0,0,0,0h-1.8c-0.3,0-0.5-0.2-0.5-0.5s0.2-0.5,0.5-0.5h2.8c1.1,0,1.9-0.9,1.9-1.9c0-1.1-0.9-1.9-1.9-1.9
+	c0,0,0,0,0,0h-1.7c-0.3,0-0.5-0.2-0.5-0.5s0.2-0.5,0.5-0.5H23c1.1,0,2-0.8,2-1.9s-0.8-2-1.9-2c0,0-0.1,0-0.1,0h-3.7
+	c-0.3,0-0.5-0.2-0.5-0.5s0.2-0.5,0.5-0.5h4.4c1.1,0,1.9-0.9,1.9-1.9c0-1.1-0.9-1.9-1.9-1.9c0,0,0,0,0,0h-8.4c-1.3,0-2.3-1.1-2.3-2.4
+	c0-0.6,0.3-1.2,0.7-1.7l0,0l2.7-2.7C16.6,19.6,16.8,19.1,16.8,18.6z" />
+                  </svg>
+                </i>
+                <span>45</span> </div>
+              Kudos Given
+            </div>
+          </div>
+          <div class="matero-col" fxFlex.gt-sm="33.33" fxFlex="100">
+            <div class="designBadge">
+              <div class="badgeIcon">
+                <i>
+                  <svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve" width="36" height="36">
+<path style="fill:#F6A624;" d="M486.4,25.6h-76.8V0H102.4v25.6H25.6C10.2,25.6,0,35.8,0,51.2v61.4c0,58.9,43.5,107.5,102.4,115.2v2.6
+	c0,74.2,51.2,135.7,120.3,151l-17.9,53.8h-58.9c-10.2,0-20.5,7.7-23,17.9L102.4,512h307.2l-20.5-58.9c-2.6-10.2-12.8-17.9-23-17.9
+	h-58.9l-17.9-53.8c69.1-15.4,120.3-76.8,120.3-151v-2.6c58.9-7.7,102.4-56.3,102.4-115.2V51.2C512,35.8,501.8,25.6,486.4,25.6z
+	 M102.4,176.6c-28.2-7.7-51.2-33.3-51.2-64V76.8h51.2V176.6z M307.2,256L256,227.8L204.8,256l12.8-51.2l-38.4-51.2H233l23-51.2
+	l23,51.2h53.8l-38.4,51.2L307.2,256z M460.8,112.6c0,30.7-23,58.9-51.2,64V76.8h51.2V112.6z"/>
+</svg>
+                </i>
+                <span>10</span> </div>
+                My Badges
+            </div>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+
+
+    <!--My Hierarchy-->
+    <mat-card class="custom-card hierarchy">
+      <div fxLayout="row" class="b-b-1 m-b-8 m-l--8 p-r-4 p-l-8 m-r--8 p-b-8">
+        <div tag-flex tag-flex-wrap class="default-footer matero-row form-field" fxFlex.gt-sm="100" fxFlex="100">
+          <div class="matero-col" fxFlex.gt-sm="100" fxFlex=100>
+            <mat-card-title>{{'252'| translate}}</mat-card-title>
+          </div>
+        </div>
+      </div>
+      <mat-card-content>
+        <ul>
+          <li>
+            <img src="../../../assets/images/image-03.png">
+            <p><strong>Khurana, Rakesh (MIND)</strong>COO</p>
+            <mat-icon>{{'253'| translate}}</mat-icon>
+          </li>
+          <li>
+            <img src="../../../assets/images/image-04.png">
+            <p><strong>Arora, Sudhir (MIND)</strong>Vice Preseident</p>
+            <mat-icon>{{'253'| translate}}</mat-icon>
+          </li>
+          <li class="my-hierarchy">
+            <img src="../../../assets/images/image-05.png">
+            <p><strong>Jamal, Nasir (MIND)</strong>Project Manager</p>
+            <span>You</span>
+          </li>
+        </ul>
+      </mat-card-content>
+    </mat-card>
+
+    <!--Team Member Status-->
+    <mat-card class="custom-card team-status">
+      <div fxLayout="row" class="b-b-1 m-b-8 m-l--8 p-r-4 p-l-8 m-r--8 p-b-8">
+        <div tag-flex tag-flex-wrap class="default-footer matero-row form-field" fxFlex.gt-sm="100" fxFlex="100">
+          <div class="matero-col" fxFlex.gt-sm="80" fxFlex=100>
+            <mat-card-title>{{'254'| translate}}</mat-card-title>
+          </div>
+          <div class="matero-col" fxFlex.gt-sm="20" fxFlex=100>
+            <div fxLayoutAlign="end center">
+              <button mat-icon-button>
+                <mat-icon>{{'255'| translate}}</mat-icon>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <mat-card-content>
+        <div class="btn-actions">
+        <button mat-raised-button color="primary">All</button>
+        <button mat-raised-button>Present</button>
+        <button mat-raised-button>On Leave</button>
+        <button mat-raised-button>On Duty</button>
+        <button mat-raised-button>Absent</button>
+        <button mat-raised-button>Late</button>
+        </div>
+        <ul>
+          <li>
+            <img src="../../../assets/images/image-06.jpg">
+            <p><strong>Kapoor, Ritwik (MIND)</strong>Project Leader</p>
+            <span class="present">Present</span>
+          </li>
+          <li>
+            <img src="../../../assets/images/image-07.jpg">
+            <p><strong>Chopra, Jagdish (MIND)</strong>Software Engineer</p>
+            <span class="duty">On Duty</span>
+          </li>
+          <li>
+            <img src="../../../assets/images/image-08.jpg">
+            <p><strong>Khandoori, Vikas (MIND)</strong>Junior Software Engineer</p>
+            <span class="present">Present</span>
+          </li>
+          <li>
+            <img src="../../../assets/images/image-09.jpg">
+            <p><strong>Malhotra, Puneet (MIND)</strong>Engineer Trainee</p>
+            <span class="leave">On Leave</span>
+          </li>
+        </ul>
+      </mat-card-content>
+    </mat-card>
+
+</div>
+
+  </div>
+</div>
+
+
+<router-outlet>
+  <app-custommodal (closePanel)="closed($event)"
+    [ngClass]="{ 'customizer-panel': true, 'mat-elevation-z4 opened': opened }"></app-custommodal>
+  <div #overlayDiv [ngClass]="{ 'customizer-panel-overlay': true, opened: opened }" (click)="closed()"></div>
+</router-outlet>

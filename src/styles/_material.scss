@@ -1,0 +1,37 @@
+// ==================================================
+// Material Components Style Fix
+// ==================================================
+.mat-table {
+  width: 100%;
+}
+
+.mat-card {
+  margin-bottom: $gutter;
+}
+
+.mat-card-header .mat-card-title {
+
+  font-family: barlowbold;
+}
+.mat-accordion {
+  display: block;
+  margin-bottom: $gutter;
+}
+
+.mat-list-base {
+  position: relative;
+}
+.mat-card-header-text {margin: 0 !important;}
+// Form horizontal
+.matero-form-horizontal {
+  .mat-form-field {
+    width: 100%;
+  }
+}
+.mat-header-cell {
+  font-family: barlowbold;
+  }
+.mat-tab-label-active .mat-tab-label-content {color: mat-color(map-get($theme, primary));}
+.mat-tab-body-wrapper {padding:.75em;}
+.mat-card:not([class*=mat-elevation-z]) {box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.2) !important}
+.mat-select {font-size: .9rem !important}

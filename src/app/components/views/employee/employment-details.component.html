@@ -1,0 +1,110 @@
+<h1 class="heading-h1 p-b-8">{{'32'| translate}}</h1>
+<div fxLayout="row wrap" class="matero-row">
+    <!--Employment Details-->
+    <div class="matero-col" fxFlex.gt-sm="100" fxFlex="100">
+        <mat-card class="custom-card view-card">
+            <div fxLayout="row" class="b-b-1 m-b-8 m-l--8 p-r-4 p-l-8 m-r--8 p-b-8">
+              <div tag-flex tag-flex-wrap class="default-footer matero-row form-field" fxFlex.gt-sm="100" fxFlex="100">
+                <div class="matero-col" fxFlex.gt-sm="50" fxFlex=100>
+                  <mat-card-title>{{'32'| translate}}</mat-card-title>
+                </div>
+                <div class="matero-col" fxFlex.gt-sm="50" fxFlex=100>
+                    <div fxLayoutAlign="end center">
+                            <button mat-icon-button>
+                            <mat-icon>{{'99'| translate}}</mat-icon>
+                          </button>
+                      </div>
+                </div>
+              </div>
+            </div>
+            <mat-card-content>
+                <div fxLayout="row wrap" class="matero-row">
+                    <div class="matero-col" fxFlex.gt-sm="50" fxFlex="100">
+                        <p>{{'182'| translate}}<span>MIND</span></p>
+                        <p>{{'183'| translate}} <span>Informational Technology </span></p>
+                        <p>{{'184'| translate}} <span>IT</span></p>
+                        <p>{{'185'| translate}} <span>COSA</span></p>
+                        <p>{{'186'| translate}}<span>ASIA</span></p>
+                        <p>{{'187'| translate}} <span>Motherson</span></p>
+                        <p>{{'188'| translate}} <span>0068/SAM/JAN/19</span></p>
+                        <p>{{'189'| translate}} <span>Project</span></p>
+                        <p>{{'190'| translate}} <span>Agency</span></p>
+                        <p>{{'191'| translate}} <span>-----</span></p>
+                        <p>{{'192'| translate}} <span>DD/MMM/YY</span></p>
+                        <p>{{'193'| translate}} <span>DD/MMM/YY</span></p>
+                        <p>{{'194'| translate}} <span>Associate</span></p>
+                        <p>{{'195'| translate}} <span>Permanent</span></p>
+                        <p>{{'196'| translate}} <span>Active</span></p>
+                        <p>{{'197'| translate}} <span>Direct</span></p>
+                        <p>{{'198'| translate}} <mat-icon class="history-align">history</mat-icon> <span>DD/MMM/YY</span></p>
+                        <p>{{'199'| translate}} <mat-icon class="history-align">history</mat-icon><span>Software Services</span></p>
+                        </div>
+                        <div class="matero-col" fxFlex.gt-sm="50" fxFlex="100">
+                            <p>{{'200'| translate}} <mat-icon class="history-align">history</mat-icon><span>-</span></p>
+                            <p>{{'201'| translate}} <mat-icon class="history-align">history</mat-icon><span>-</span></p>
+                            <p>{{'202'| translate}} <mat-icon class="history-align">history</mat-icon><span>-</span></p>
+                            <p>{{'163'| translate}} <mat-icon class="history-align">history</mat-icon><span>-</span></p>
+                            <p>{{'203'| translate}} <mat-icon class="history-align">history</mat-icon><span>-</span></p>
+                            <p>{{'204'| translate}} <mat-icon class="history-align">history</mat-icon><span>-</span></p>
+                            <p>{{'205'| translate}} <span>-</span></p>
+                            <p>{{'206'| translate}} <span>-</span></p>
+                            <p>{{'207'| translate}} <span>-</span></p>
+                            <p>{{'208'| translate}} <span>-</span></p>
+                            <p>{{'209'| translate}} <span>-</span></p>
+                            <p>{{'210'| translate}} <span>-</span></p>
+                            <p>{{'211'| translate}} <span>-</span></p>
+                            <p>{{'212'| translate}} <span>-</span></p>
+                            <p>{{'213'| translate}} <span>-</span></p>
+                            <p>{{'214'| translate}} <span>-</span></p>
+                            <p>{{'215'| translate}} <span>-</span></p>
+                            <p>{{'216'| translate}} <span>-</span></p>
+                    </div>
+                    </div>
+
+                    </mat-card-content>
+                      </mat-card>
+
+                      <!--Reporting Structure-->
+                      <mat-card class="custom-card view-card">
+                        <div fxLayout="row" class="b-b-1 m-b-8 m-l--8 p-r-4 p-l-8 m-r--8 p-b-8">
+                          <div tag-flex tag-flex-wrap class="default-footer matero-row form-field" fxFlex.gt-sm="100" fxFlex="100">
+                            <div class="matero-col" fxFlex.gt-sm="50" fxFlex=100>
+                              <mat-card-title>{{'217'| translate}}</mat-card-title>
+                            </div>
+                            <div class="matero-col" fxFlex.gt-sm="50" fxFlex=100>
+                                <div fxLayoutAlign="end center">
+                                        <button mat-icon-button>
+                                        <mat-icon>{{'99'| translate}}</mat-icon>
+                                      </button>
+                                  </div>
+                            </div>
+                          </div>
+                        </div>
+                        <mat-card-content>
+                            <mat-table [dataSource]="employeeDataSource">
+                                <ng-container cdkColumnDef="From">
+                                  <mat-header-cell *cdkHeaderCellDef>{{'218'| translate}}</mat-header-cell>
+                                  <mat-cell *cdkCellDef="let row">{{row.From}}</mat-cell>
+                                </ng-container>
+                                <ng-container cdkColumnDef="to">
+                                  <mat-header-cell *cdkHeaderCellDef>{{'219'| translate}}</mat-header-cell>
+                                  <mat-cell *cdkCellDef="let row">{{row.to}}</mat-cell>
+                                </ng-container>
+                                <ng-container cdkColumnDef="managercode">
+                                  <mat-header-cell *cdkHeaderCellDef>{{'220'| translate}}</mat-header-cell>
+                                  <mat-cell *cdkCellDef="let row">{{row.managercode}}</mat-cell>
+                                </ng-container>
+                                <ng-container cdkColumnDef="type">
+                                 <mat-header-cell *cdkHeaderCellDef>{{'221'| translate}}</mat-header-cell>
+                                 <mat-cell *cdkCellDef="let row">{{row.type}}</mat-cell>
+                               </ng-container>
+                                <mat-header-row *cdkHeaderRowDef="displayedColumns"></mat-header-row>
+                                <mat-row *cdkRowDef="let row; columns: displayedColumns;"></mat-row>
+                              </mat-table>
+                                </mat-card-content>
+                                  </mat-card>
+    </div>
+
+
+</div>
+

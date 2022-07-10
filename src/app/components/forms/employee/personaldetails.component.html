@@ -1,0 +1,461 @@
+<mat-card class="custom-card">
+    <div fxLayout="row" class="b-b-1 m-b-8 m-l--8 p-r-4 p-l-8 m-r--8 p-b-8">
+      <div tag-flex tag-flex-wrap class="default-footer matero-row form-field" fxFlex.gt-sm="100" fxFlex="100">
+  
+        <div class="matero-col" fxFlex.gt-sm="100" fxFlex=100>
+          <mat-card-title>{{'31'| translate}}</mat-card-title>
+        </div>
+      </div>
+    </div>
+    <mat-card-content>
+        <mat-card class="remove-borders">
+            <mat-card-content>
+              <div fxLayout="row wrap">
+                <div class="matero-col field-scope" fxFlex.gt-sm="33.3" fxFlex="100">
+                  <mat-form-field floatLabel="always">
+                    <mat-label>{{'133'| translate}}</mat-label>
+                    <mat-select [(ngModel)]="selectedUnits" placeholder="Select unit" required>
+                      <mat-option *ngFor="let unit of units" [value]="unit.value">
+                        {{ unit.label }}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+
+                <div class="matero-col field-scope" fxFlex.gt-sm="33.3" fxFlex="100">
+                    <mat-form-field floatLabel="always">
+                      <mat-label>{{'135'| translate}}</mat-label>
+                      <mat-select [(ngModel)]="selectedCategory" placeholder="Select category" required>
+                        <mat-option *ngFor="let category of categories" [value]="category.value">
+                          {{ category.label }}
+                        </mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                  </div>               
+                
+                <div class="matero-col field-scope" fxFlex.gt-sm="33.3" fxFlex="100">
+                    <mat-form-field floatLabel="always">
+                      <mat-label>{{'134'| translate}}</mat-label>
+                      <input matInput placeholder="{{'103'| translate}}" value="" required>
+                    </mat-form-field>
+                  </div>                
+                
+              </div>
+      
+      
+            </mat-card-content>
+          </mat-card>
+          <mat-accordion>
+            <!--Basic Information-->
+            <mat-expansion-panel #panel1>
+              <mat-expansion-panel-header>{{'42'| translate}}</mat-expansion-panel-header>
+              <div fxLayout="row wrap">
+                <div class="matero-col field-scope" fxFlex.gt-sm="33.3" fxFlex="100">
+                    <div fxLayout="row wrap" class="matero-row">
+                        <div class="matero-col field-scope" fxFlex.gt-sm="25" fxFlex="100">
+                            <div class="user-section">
+                                <img [src]="url ? url : '../../../../assets/images/user-default.jpg'"> <br/>
+                               <button mat-mini-fab color="primary"><mat-icon>add</mat-icon><input type='file' (change)="onSelectFile($event)"></button>                               
+                              </div>
+                        </div>
+                        <div class="matero-col field-scope" fxFlex.gt-sm="75" fxFlex="100">
+                            <mat-form-field floatLabel="always">
+                                <mat-label>{{'136'| translate}}</mat-label>
+                                <mat-select [(ngModel)]="selectedTitles" placeholder="Select" required>
+                                  <mat-option *ngFor="let title of titles" [value]="title.value">
+                                    {{ title.label }}
+                                  </mat-option>
+                                </mat-select>
+                              </mat-form-field>
+                        </div>
+                      </div>
+                </div>
+                <div class="matero-col field-scope" fxFlex.gt-sm="33.3" fxFlex="100">
+                    <mat-form-field floatLabel="always">
+                      <mat-label>{{'138'| translate}}</mat-label>
+                      <input matInput placeholder="{{'103'| translate}}" value="" required>
+                    </mat-form-field>
+                  </div>  
+                  <div class="matero-col field-scope" fxFlex.gt-sm="33.3" fxFlex="100">
+                    <mat-form-field floatLabel="always">
+                      <mat-label>{{'139'| translate}}</mat-label>
+                      <input matInput placeholder="{{'103'| translate}}" value="">
+                    </mat-form-field>
+                  </div> 
+                  <div class="matero-col field-scope" fxFlex.gt-sm="33.3" fxFlex="100">
+                    <mat-form-field floatLabel="always">
+                      <mat-label>{{'140'| translate}}</mat-label>
+                      <input matInput placeholder="{{'103'| translate}}" value="">
+                    </mat-form-field>
+                  </div> 
+                  <div class="matero-col field-scope" fxFlex.gt-sm="33.3" fxFlex="100">
+                    <mat-form-field floatLabel="always">
+                      <mat-label>{{'141'| translate}}</mat-label>
+                      <input matInput placeholder="{{'103'| translate}}" value="">
+                    </mat-form-field>
+                  </div> 
+                  <div class="matero-col field-scope" fxFlex.gt-sm="33.3" fxFlex="100">
+                    <mat-form-field floatLabel="always">
+                      <mat-label>{{'142'| translate}}</mat-label>
+                      <input matInput placeholder="{{'103'| translate}}" value="">
+                    </mat-form-field>
+                  </div>   
+              </div>
+              </mat-expansion-panel>
+
+               <!--Personal Information-->
+            <mat-expansion-panel #panel2>
+                <mat-expansion-panel-header>{{'43'| translate}}</mat-expansion-panel-header>
+                <div fxLayout="row wrap">
+                  <div class="matero-col field-scope" fxFlex.gt-sm="33.3" fxFlex="100">
+                    <mat-form-field floatLabel="always">
+                        <mat-label>{{'62'| translate}}</mat-label>
+                        <input matInput
+                               [matDatepicker]="birthdayPicker"
+                               [(ngModel)]="birthday"
+                               #birthdayModel="ngModel"
+                               [max]="maxBirthday"
+                               required placeholder="Enter Date">
+                        <mat-datepicker-toggle matSuffix [for]="birthdayPicker"></mat-datepicker-toggle>
+                        <mat-datepicker #birthdayPicker></mat-datepicker>
+                      </mat-form-field>
+                </div>
+                <div class="matero-col field-scope" fxFlex.gt-sm="33.3" fxFlex="100">
+                <span class="custom-toggle">{{'63'| translate}}</span>
+                <mat-button-toggle-group name="genders" [(ngModel)]="selectedGender" color="primary">
+                    <mat-button-toggle *ngFor="let gender of genderOptions" [value]="gender">
+                      {{gender}}
+                    </mat-button-toggle>
+                  </mat-button-toggle-group>
+                  
+                </div>
+
+                <div class="matero-col field-scope" fxFlex.gt-sm="33.3" fxFlex="100">
+                    <mat-form-field floatLabel="always">
+                      <mat-label>{{'64'| translate}}</mat-label>
+                      <input matInput placeholder="{{'103'| translate}}" value="" required>
+                    </mat-form-field>
+                  </div>  
+
+                  <div class="matero-col field-scope" fxFlex.gt-sm="33.3" fxFlex="100">
+                    <mat-form-field floatLabel="always">
+                      <mat-label>{{'65'| translate}}</mat-label>
+                      <mat-select [(ngModel)]="selectedBlood" placeholder="Select" required>
+                        <mat-option *ngFor="let blood of bloods" [value]="blood.value">
+                          {{ blood.label }}
+                        </mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                  </div>
+
+                  <div class="matero-col field-scope" fxFlex.gt-sm="33.3" fxFlex="100">
+                    <mat-form-field floatLabel="always">
+                      <mat-label>{{'66'| translate}}</mat-label>
+                      <input matInput placeholder="{{'103'| translate}}" value="">
+                    </mat-form-field>
+                  </div> 
+                  
+                  <div class="matero-col field-scope" fxFlex.gt-sm="33.3" fxFlex="100">
+                    <mat-form-field floatLabel="always">
+                      <mat-label>{{'67'| translate}}</mat-label>
+                      <mat-select [(ngModel)]="selectedType" placeholder="Select">
+                        <mat-option *ngFor="let type of types" [value]="type.value">
+                          {{ type.label }}
+                        </mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                  </div>
+
+                  <div class="matero-col field-scope" fxFlex.gt-sm="33.3" fxFlex="100">
+                    <mat-form-field floatLabel="always">
+                      <mat-label>{{'68'| translate}}</mat-label>
+                      <mat-select [(ngModel)]="selectedstatus" placeholder="Select">
+                        <mat-option *ngFor="let status of maritalStatus" [value]="status.value">
+                          {{ status.label }}
+                        </mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                  </div>
+
+                  <div class="matero-col field-scope" fxFlex.gt-sm="33.3" fxFlex="100">
+                    <mat-form-field floatLabel="always">
+                        <mat-label>{{'69'| translate}}</mat-label>
+                        <input matInput
+                               [matDatepicker]="AnniversaryDate"
+                               placeholder="Select Date">
+                        <mat-datepicker-toggle matSuffix [for]="AnniversaryDate"></mat-datepicker-toggle>
+                        <mat-datepicker #AnniversaryDate></mat-datepicker>
+                      </mat-form-field>
+                </div>
+
+                
+                <div class="matero-col field-scope" fxFlex.gt-sm="33.3" fxFlex="100">
+                    <mat-form-field floatLabel="always">
+                      <mat-label>{{'70'| translate}}</mat-label>
+                      <mat-select [(ngModel)]="selectedNationality" placeholder="Select" required>
+                        <mat-option *ngFor="let nationality of nationalitiesStatus" [value]="nationality.value">
+                          {{ nationality.label }}
+                        </mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                  </div>
+
+                  
+                  <div class="matero-col field-scope" fxFlex.gt-sm="33.3" fxFlex="100">
+                    <mat-form-field floatLabel="always">
+                      <mat-label>{{'71'| translate}}</mat-label>
+                      <input matInput placeholder="{{'103'| translate}}" value="">
+                    </mat-form-field>
+                  </div>
+                  
+                  <div class="matero-col field-scope" fxFlex.gt-sm="33.3" fxFlex="100">
+                    <mat-form-field floatLabel="always">
+                      <mat-label>{{'143'| translate}}</mat-label>
+                      <input matInput placeholder="{{'103'| translate}}" value="">
+                    </mat-form-field>
+                  </div>
+
+                
+                </div>
+                </mat-expansion-panel>
+
+                <!--Contact Information-->
+                <mat-expansion-panel #panel3>
+                  <mat-expansion-panel-header>{{'44'| translate}}</mat-expansion-panel-header>
+                  <h6 class="m-l-8 m-b-8">{{'72'| translate}}</h6>
+                  <div fxLayout="row wrap">
+                    <div class="matero-col field-scope" fxFlex.gt-sm="20" fxFlex="100">
+                      <mat-form-field floatLabel="always">
+                        <mat-label>{{'73'| translate}}</mat-label>
+                        <input matInput placeholder="{{'103'| translate}}" value="">
+                      </mat-form-field>
+                  </div>
+                  <div class="matero-col field-scope" fxFlex.gt-sm="80" fxFlex="100">
+                      <mat-form-field floatLabel="always">
+                        <mat-label>{{'74'| translate}}</mat-label>
+                        <input matInput placeholder="{{'103'| translate}}" value="">
+                      </mat-form-field>
+                    </div>  
+                    <div class="matero-col field-scope" fxFlex.gt-sm="80" fxFlex="100">
+                      <mat-form-field floatLabel="always">
+                        <mat-label>{{'75'| translate}}</mat-label>
+                        <input matInput placeholder="{{'103'| translate}}" value="">
+                      </mat-form-field>
+                    </div>
+                    <div class="matero-col field-scope" fxFlex.gt-sm="20" fxFlex="100">
+                      <mat-form-field floatLabel="always">
+                        <mat-label>{{'76'| translate}}</mat-label>
+                        <input matInput placeholder="{{'103'| translate}}" value="">
+                      </mat-form-field>
+                  </div> 
+                  <div class="matero-col field-scope" fxFlex.gt-sm="33.33" fxFlex="100">
+                    <mat-form-field floatLabel="always">
+                      <mat-label>{{'77'| translate}}</mat-label>
+                      <input matInput placeholder="{{'103'| translate}}" value="">
+                    </mat-form-field>
+                </div>
+                <div class="matero-col field-scope" fxFlex.gt-sm="33.33" fxFlex="100">
+                  <mat-form-field floatLabel="always">
+                    <mat-label>{{'78'| translate}}</mat-label>
+                    <input matInput placeholder="{{'103'| translate}}" value="">
+                  </mat-form-field>
+              </div>
+              <div class="matero-col field-scope" fxFlex.gt-sm="33.33" fxFlex="100">
+                <mat-form-field floatLabel="always">
+                  <mat-label>{{'79'| translate}}</mat-label>
+                  <input matInput placeholder="{{'103'| translate}}" value="">
+                </mat-form-field>
+            </div> 
+          </div>
+            <h6 class="m-l-8 m-b-8">{{'80'| translate}}</h6>
+            <div fxLayout="row wrap">
+              <div class="matero-col field-scope" fxFlex.gt-sm="20" fxFlex="100">
+                <mat-form-field floatLabel="always">
+                  <mat-label>{{'73'| translate}}</mat-label>
+                  <input matInput placeholder="{{'103'| translate}}" value="">
+                </mat-form-field>
+            </div>
+            <div class="matero-col field-scope" fxFlex.gt-sm="80" fxFlex="100">
+                <mat-form-field floatLabel="always">
+                  <mat-label>{{'74'| translate}}</mat-label>
+                  <input matInput placeholder="{{'103'| translate}}" value="">
+                </mat-form-field>
+              </div>  
+              <div class="matero-col field-scope" fxFlex.gt-sm="80" fxFlex="100">
+                <mat-form-field floatLabel="always">
+                  <mat-label>{{'75'| translate}}</mat-label>
+                  <input matInput placeholder="{{'103'| translate}}" value="">
+                </mat-form-field>
+              </div>
+              <div class="matero-col field-scope" fxFlex.gt-sm="20" fxFlex="100">
+                <mat-form-field floatLabel="always">
+                  <mat-label>{{'76'| translate}}</mat-label>
+                  <input matInput placeholder="{{'103'| translate}}" value="">
+                </mat-form-field>
+            </div> 
+            <div class="matero-col field-scope" fxFlex.gt-sm="33.33" fxFlex="100">
+              <mat-form-field floatLabel="always">
+                <mat-label>{{'77'| translate}}</mat-label>
+                <input matInput placeholder="{{'103'| translate}}" value="">
+              </mat-form-field>
+          </div>
+          <div class="matero-col field-scope" fxFlex.gt-sm="33.33" fxFlex="100">
+            <mat-form-field floatLabel="always">
+              <mat-label>{{'78'| translate}}</mat-label>
+              <input matInput placeholder="{{'103'| translate}}" value="">
+            </mat-form-field>
+        </div>
+        <div class="matero-col field-scope" fxFlex.gt-sm="33.33" fxFlex="100">
+          <mat-form-field floatLabel="always">
+            <mat-label>{{'79'| translate}}</mat-label>
+            <input matInput placeholder="{{'103'| translate}}" value="">
+          </mat-form-field>
+      </div> 
+      <div class="matero-col field-scope" fxFlex.gt-sm="33.33" fxFlex="100">
+        <mat-form-field floatLabel="always">
+          <mat-label>{{'81'| translate}}</mat-label>
+          <input matInput placeholder="{{'103'| translate}}" value="">
+        </mat-form-field>
+    </div> 
+    <div class="matero-col field-scope" fxFlex.gt-sm="33.33" fxFlex="100">
+      <mat-form-field floatLabel="always">
+        <mat-label>{{'82'| translate}}</mat-label>
+        <input matInput placeholder="{{'103'| translate}}" value="">
+      </mat-form-field>
+  </div>
+  <div class="matero-col field-scope" fxFlex.gt-sm="33.33" fxFlex="100">
+    <mat-form-field floatLabel="always">
+      <mat-label>{{'83'| translate}}</mat-label>
+      <input matInput placeholder="{{'103'| translate}}" value="">
+    </mat-form-field>
+</div> 
+<div class="matero-col field-scope" fxFlex.gt-sm="100" fxFlex="100">
+  <span class="custom-toggle">{{'144'| translate}}</span>
+  <app-file-drag-drop></app-file-drag-drop>
+</div> 
+
+    </div>
+
+  
+                  
+                 
+                  </mat-expansion-panel>
+                  
+                  <!--Emergency Details-->
+                  <mat-expansion-panel #panel4>
+                    <mat-expansion-panel-header>{{'45'| translate}}</mat-expansion-panel-header>
+                    <div fxLayout="row wrap">
+                      <div class="matero-col field-scope" fxFlex.gt-sm="33.33" fxFlex="100">
+                        <mat-form-field floatLabel="always">
+                          <mat-label>{{'145'| translate}}</mat-label>
+                          <input matInput placeholder="{{'103'| translate}}" value="">
+                        </mat-form-field>
+                    </div>
+                    <div class="matero-col field-scope" fxFlex.gt-sm="33.33" fxFlex="100">
+                        <mat-form-field floatLabel="always">
+                          <mat-label>{{'146'| translate}}</mat-label>
+                          <input matInput placeholder="{{'103'| translate}}" value="">
+                        </mat-form-field>
+                      </div>  
+                      <div class="matero-col field-scope" fxFlex.gt-sm="33.33" fxFlex="100">
+                        <mat-form-field floatLabel="always">
+                          <mat-label>{{'147'| translate}}</mat-label>
+                          <input matInput placeholder="{{'103'| translate}}" value="">
+                        </mat-form-field>
+                      </div> 
+                      <div class="matero-col field-scope" fxFlex.gt-sm="100" fxFlex="100">
+                        <mat-form-field floatLabel="always">
+                          <mat-label>{{'148'| translate}}</mat-label>
+                          <input matInput placeholder="{{'103'| translate}}" value="">
+                        </mat-form-field>
+                      </div>  
+            </div>
+            <div fxLayout="row wrap">
+              <div class="matero-col field-scope" fxFlex.gt-sm="100" fxFlex="100">
+                <div fxLayoutAlign="end center">
+                  <button type="button" mat-raised-button color="primary" class="m-b-8">
+                    <mat-icon class="align-button">{{'92'| translate}}</mat-icon> {{'23'| translate}}
+                  </button>
+                </div>
+              </div>
+              </div>
+              <div fxLayout="row wrap">
+                <div class="matero-col field-scope" fxFlex.gt-sm="100" fxFlex="100">
+              <h6>{{'149'| translate}}</h6>
+              <mat-table [dataSource]="emergencyDataSource">
+     <ng-container cdkColumnDef="position">
+       <mat-header-cell *cdkHeaderCellDef>{{'150'| translate}}</mat-header-cell>
+       <mat-cell *cdkCellDef="let row">{{row.position}}</mat-cell>
+     </ng-container>
+     <ng-container cdkColumnDef="name">
+       <mat-header-cell *cdkHeaderCellDef>{{'151'| translate}}</mat-header-cell>
+       <mat-cell *cdkCellDef="let row">{{row.name}}</mat-cell>
+     </ng-container>
+     <ng-container cdkColumnDef="relation">
+       <mat-header-cell *cdkHeaderCellDef>{{'152'| translate}}</mat-header-cell>
+       <mat-cell *cdkCellDef="let row">{{row.relation}}</mat-cell>
+     </ng-container>
+     <ng-container cdkColumnDef="mobile">
+      <mat-header-cell *cdkHeaderCellDef>{{'153'| translate}}</mat-header-cell>
+      <mat-cell *cdkCellDef="let row">{{row.mobile}}</mat-cell>
+    </ng-container>
+    <ng-container cdkColumnDef="address">
+      <mat-header-cell *cdkHeaderCellDef>{{'154'| translate}}</mat-header-cell>
+      <mat-cell *cdkCellDef="let row">{{row.address}}</mat-cell>
+    </ng-container>
+     <mat-header-row *cdkHeaderRowDef="displayedColumns"></mat-header-row>
+     <mat-row *cdkRowDef="let row; columns: displayedColumns;"></mat-row>
+   </mat-table>
+   </div>
+   </div>
+
+   
+
+             
+             </mat-expansion-panel>
+               
+              <!--Background Check-->
+              <mat-expansion-panel #panel5>
+                <mat-expansion-panel-header>{{'155'| translate}}</mat-expansion-panel-header>
+                <div fxLayout="row wrap">
+                  <div class="matero-col field-scope" fxFlex.gt-sm="33.33" fxFlex="100">
+                    <mat-form-field floatLabel="always">
+                      <mat-label>{{'87'| translate}}</mat-label>
+                      <input matInput placeholder="{{'103'| translate}}" value="">
+                    </mat-form-field>
+                </div>
+                <div class="matero-col field-scope" fxFlex.gt-sm="33.33" fxFlex="100">
+                    <mat-form-field floatLabel="always">
+                      <mat-label>{{'88'| translate}}</mat-label>
+                      <input matInput placeholder="{{'103'| translate}}" value="">
+                    </mat-form-field>
+                  </div>  
+                  <div class="matero-col field-scope" fxFlex.gt-sm="33.33" fxFlex="100">
+                    <mat-form-field floatLabel="always">
+                      <mat-label>{{'89'| translate}}</mat-label>
+                      <input matInput placeholder="{{'103'| translate}}" value="">
+                    </mat-form-field>
+                  </div> 
+                  <div class="matero-col field-scope" fxFlex.gt-sm="20" fxFlex="100">
+                    <mat-form-field floatLabel="always">
+                      <mat-label>{{'90'| translate}}</mat-label>
+                      <input matInput placeholder="{{'103'| translate}}" value="">
+                    </mat-form-field>
+                  </div>  
+                  <div class="matero-col field-scope" fxFlex.gt-sm="80" fxFlex="100">
+                    <mat-form-field floatLabel="always">
+                      <mat-label>{{'91'| translate}}</mat-label>
+                      <input matInput placeholder="{{'103'| translate}}" value="">
+                    </mat-form-field>
+                  </div>  
+        </div>
+        
+         </mat-expansion-panel>
+        </mat-accordion>
+
+          
+    </mat-card-content>
+  </mat-card>
+  
+  
+  

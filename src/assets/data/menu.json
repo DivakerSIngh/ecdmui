@@ -1,0 +1,149 @@
+{
+  "menu": [
+    {
+      "state": "home",
+      "name": "Dashboard",
+      "type": "link",
+      "icon": "home",
+      "badge": {
+        "color": "red-500",
+        "value": "5"
+      }
+    },
+    {
+      "state": "home",
+      "name": "People Planning",
+      "type": "link",
+      "icon": "home"
+    },
+    {
+      "state": "home",
+      "name": "Recruitment",
+      "type": "link",
+      "icon": "home"
+    },
+    {
+      "state": "home",
+      "name": "On-boarding",
+      "type": "link",
+      "icon": "home"
+    },
+    {
+      "state": "home",
+      "name": "ECDM  - Core HR",
+      "type": "link",
+      "icon": "home"
+    },
+    {
+      "state": "home",
+      "name": "Attendance",
+      "type": "link",
+      "icon": "home"
+    },
+    {
+      "state": "home",
+      "name": "MySpace",
+      "type": "link",
+      "icon": "home"
+    },
+    {
+      "state": "home",
+      "name": "Training",
+      "type": "link",
+      "icon": "home"
+    },
+    {
+      "state": "home",
+      "name": "e-Learning",
+      "type": "link",
+      "icon": "home"
+    },
+    {
+      "state": "home",
+      "name": "Performance",
+      "type": "link",
+      "icon": "home"
+    },
+    {
+      "state": "home",
+      "name": "Analytics",
+      "type": "link",
+      "icon": "home"
+    },
+    {
+      "state": "home",
+      "name": "Reimbursement",
+      "type": "link",
+      "icon": "home"
+    },
+    {
+      "state": "home",
+      "name": "Payroll",
+      "type": "link",
+      "icon": "home"
+    },
+   {
+    "state": "configuration",
+    "name": "Configuration",
+    "type": "sub",
+    "icon": "settings",
+    "children": [
+      {
+        "state": "employee",
+        "name": "Employee",
+        "type": "link",
+        "icon": "people"
+      },
+      {
+        "state": "tenant",
+        "name": "Tenant",
+        "type": "link",
+        "icon": "border_color"
+      }
+    ]
+  },
+  {
+    "state": "forms",
+    "name": "Forms",
+    "type": "sub",
+    "icon": "group_add",
+    "children": [
+      {
+        "state": "employee",
+        "name": "Employee",
+        "type": "link",
+        "icon": "people"
+      },
+      {
+        "state": "tenant",
+        "name": "Tenant",
+        "type": "link",
+        "icon": "border_color"
+      }
+    ]
+  },
+  {
+    "state": "views",
+    "name": "Views",
+    "type": "sub",
+    "icon": "camera_front",
+    "children": [
+      {
+        "state": "employee",
+        "name": "Employee",
+        "type": "link",
+        "icon": "people"
+      },
+      {
+        "state": "tenant",
+        "name": "Tenant",
+        "type": "link",
+        "icon": "border_color"
+      }
+    ]
+  }
+    
+  ]
+}
+
+

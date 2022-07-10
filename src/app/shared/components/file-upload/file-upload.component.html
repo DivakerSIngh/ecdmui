@@ -1,0 +1,27 @@
+<mat-dialog-content>
+    <h2 mat-dialog-title>{{'22'| translate}}</h2>
+    <div fxLayout="row wrap">
+        <div class="matero-col field-scope" fxFlex.gt-sm="100" fxFlex="100">
+          <mat-form-field floatLabel="always">
+            <mat-label>{{'50'| translate}}</mat-label>
+            <input matInput placeholder="Enter New Category Name" value="">
+          </mat-form-field>
+        </div>
+        <div class="matero-col" fxFlex.gt-sm="100" fxFlex="100">
+            <app-file-drag-drop></app-file-drag-drop>
+        </div>
+        
+</div>
+</mat-dialog-content>
+<div class="matero-row" fxLayout="row wrap">
+    <div class="matero-col" fxFlex.gt-sm="100" fxFlex="100" >
+        <div fxLayout="row">
+            <div fxFlex.gt-sm="100" fxFlex="100" fxLayoutAlign="end center">               
+                <mat-dialog-actions>
+                    <button mat-button mat-dialog-close>{{'94'| translate}}</button>
+                    <button mat-raised-button color="primary" (click)="onConfirmClick()">{{'95'| translate}}</button>                   
+                </mat-dialog-actions>
+            </div>
+        </div>
+    </div>
+</div>

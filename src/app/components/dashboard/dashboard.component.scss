@@ -1,0 +1,59 @@
+@import '~@angular/material/theming';
+
+.customizer-panel {
+  position: fixed;
+  top: 0;
+  right: -40vw;
+  bottom: 0;
+  z-index: 300;
+  width: 40vw !important;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #fff;
+  transform: translateX(0);
+  transition: transform $swift-ease-out-duration $swift-ease-out-timing-function;
+  overflow: auto;
+
+  &.opened {
+    transform: translateX(-100%);
+  }
+
+  [dir='rtl'] & {
+    left: -40vw;
+    right: auto;
+
+    &.opened {
+      transform: translateX(100%);
+    }
+  }
+}
+
+.customizer-panel-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 299;
+  transition-duration: $swift-ease-out-duration;
+  transition-timing-function: $swift-ease-out-timing-function;
+  transition-property: background-color, visibility;
+  visibility: hidden;
+
+  &.opened {
+    background-color: rgba(0, 0, 0, .20);
+    visibility: visible;
+  }
+}
+
+@media only screen and (max-width:959px){
+  .customizer-panel {
+    right: -320px;
+    width: 320px !important;
+
+    [dir='rtl'] & {
+      left: -320px;
+  }
+
+  }
+}

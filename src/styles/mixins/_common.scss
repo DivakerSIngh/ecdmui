@@ -1,0 +1,75 @@
+@mixin transition($effect) {
+	-ms-transition				: $effect;
+	-moz-transition				: $effect;
+	-o-transition				: $effect;
+	-webkit-transition			: $effect;
+	transition					: $effect;
+}
+
+@mixin multi-transition($transition...) {
+	-ms-transition				: $transition;
+	-moz-transition				: $transition;
+	-o-transition				: $transition;
+	-webkit-transition			: $transition;
+	transition					: $transition;
+}
+
+@mixin transition-delay($effect) {
+	-ms-transition-delay		: $effect;
+	-moz-transition-delay		: $effect;
+	-o-transition-delay			: $effect;
+	-webkit-transition-delay	: $effect;
+	transition-delay			: $effect;
+}
+
+@mixin transition-duration($effect) {
+	-ms-transition-duration		: $effect;
+	-moz-transition-duration	: $effect;
+	-o-transition-duration		: $effect;
+	-webkit-transition-duration	: $effect;
+	transition-duration			: $effect;
+}
+
+@mixin transform($transform) {
+	-ms-transform				: $transform;
+	-moz-transform				: $transform;
+	-o-transform				: $transform;
+	-webkit-transform			: $transform;
+	transform					: $transform;
+}
+// translate
+@mixin translate ($x, $y) {
+  @include transform(translate($x, $y));
+}
+
+@mixin box-shadow($shadow) {
+	-ms-box-shadow				: $shadow;
+	-moz-box-shadow				: $shadow;
+	-o-box-shadow				: $shadow;
+	-webkit-box-shadow			: $shadow;
+	box-shadow					: $shadow;
+}
+
+@mixin multi-box-shadow($shadow...) {
+	-ms-box-shadow				: $shadow;
+	-moz-box-shadow				: $shadow;
+	-o-box-shadow				: $shadow;
+	-webkit-box-shadow			: $shadow;
+	box-shadow					: $shadow;
+}
+
+@mixin box-sizing($size) {
+	-ms-box-sizing				: $size;
+	-moz-box-sizing				: $size;
+	-o-box-sizing				: $size;
+	-webkit-box-sizing			: $size;
+	box-sizing					: $size;
+}
+
+@mixin border-radius($radius) {
+	-ms-border-radius			: $radius;
+	-moz-border-radius			: $radius;
+	-o-border-radius			: $radius;
+	-webkit-border-radius		: $radius;
+	border-radius				: $radius;
+}

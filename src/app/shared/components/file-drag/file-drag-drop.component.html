@@ -1,0 +1,24 @@
+<div class="uploadfilecontainer" (click)="fileInput.click()" appDragDrop (onFileDropped)="uploadFile($event)">
+        <div class="drag-upload-file"> <i>
+                <svg version="1.1" width="40" height="40" xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 40.3 40.3" style="enable-background:new 0 0 40.3 40.3;"
+                     xml:space="preserve">
+                  <path style="fill:#C0C1C2"
+                        d="M32.5,16.9C31.2,10,24.5,5.6,17.7,7c-3.8,0.7-7,3.2-8.7,6.5c-5.5,0.6-9.5,5.6-8.9,11.1c0.6,5.1,4.9,9,10,9h21.8
+  c4.6,0,8.4-3.7,8.4-8.3C40.3,20.8,36.9,17.2,32.5,16.9z M23.5,21.8v6.7h-6.7v-6.7h-5l8.4-8.4l8.4,8.4L23.5,21.8z" />
+                </svg>
+
+              </i>
+              <p>{{'100'| translate}}</p>
+            </div>
+    <input hidden type="file" #fileInput (change)="uploadFile($event.target.files)">
+  </div>
+  <span class="f-s-12">{{'101'| translate}}</span>
+    <div  class="files-list" *ngFor="let file of files;let i=index">
+      <p>{{ file }}</p>
+      <button class="delete-file" (click)="deleteAttachment(i)">
+        <mat-icon>{{'96'| translate}}</mat-icon>
+      </button>
+    </div>
+  

@@ -1,0 +1,267 @@
+<mat-card class="custom-card">
+  <div fxLayout="row" class="b-b-1 m-b-8 m-l--8 p-r-4 p-l-8 m-r--8 p-b-8">
+    <div tag-flex tag-flex-wrap class="default-footer matero-row form-field" fxFlex.gt-sm="100" fxFlex="100">
+
+      <div class="matero-col" fxFlex.gt-sm="65" fxFlex=65>
+        <mat-card-title>{{'41'| translate}}</mat-card-title>
+      </div>
+      <div fxFlex.gt-sm="35" fxFlex="35">
+        <div fxLayoutAlign="end center">
+          <button type="button" mat-raised-button color="primary" (click)="openFieldPanel()">
+            <mat-icon class="align-button">{{'92'| translate}}</mat-icon> {{'21'| translate}}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <mat-card-content>
+    <mat-accordion>
+      <!--Basic Information-->
+      <mat-expansion-panel #panel1>
+        <mat-expansion-panel-header>{{'42'| translate}}</mat-expansion-panel-header>
+        <mat-table #table [dataSource]="dataSource" cdkDropList [cdkDropListData]="dataSource"
+          (cdkDropListDropped)="dropTable($event,dataSource,this.table)">
+          <!-- Drag Column -->
+          <ng-container matColumnDef="position">
+            <mat-header-cell *matHeaderCellDef></mat-header-cell>
+            <mat-cell *matCellDef="let element">
+              <mat-icon style="pointer-events: all;" cdkDragHandle>drag_indicator</mat-icon>
+            </mat-cell>
+          </ng-container>
+
+          <!-- Sequence Column -->
+          <ng-container matColumnDef="sequence">
+            <mat-header-cell *matHeaderCellDef> {{'51'| translate}}</mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.sequence}} </mat-cell>
+          </ng-container>
+
+          <!-- Name Column -->
+          <ng-container matColumnDef="name">
+            <mat-header-cell *matHeaderCellDef> {{'52'| translate}} </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+          </ng-container>
+
+          <!-- Apply Column -->
+          <ng-container matColumnDef="checked">
+            <mat-header-cell *matHeaderCellDef>{{'53'| translate}}</mat-header-cell>
+            <mat-cell *matCellDef="let element">
+              <mat-checkbox [(ngModel)]="element.checked" (click)="$event.stopPropagation()" color="primary">
+              </mat-checkbox>
+            </mat-cell>
+          </ng-container>
+
+          <!-- Mandatory Column -->
+          <ng-container matColumnDef="checked1">
+            <mat-header-cell *matHeaderCellDef>{{'54'| translate}}</mat-header-cell>
+            <mat-cell *matCellDef="let element">
+              <mat-checkbox [(ngModel)]="element.checkedA" (click)="$event.stopPropagation()" color="primary">
+              </mat-checkbox>
+            </mat-cell>
+          </ng-container>
+
+          <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayedColumns;" cdkDrag [cdkDragData]="row"></mat-row>
+        </mat-table>
+      </mat-expansion-panel>
+
+      <!--Personal Information-->
+      <mat-expansion-panel #panel2>
+        <mat-expansion-panel-header>{{'43'| translate}}</mat-expansion-panel-header>
+        <mat-table #table2 [dataSource]="dataSource2" cdkDropList [cdkDropListData]="dataSource2"
+        (cdkDropListDropped)="dropTable($event,dataSource2,this.table2)">
+        <!-- Drag Column -->
+        <ng-container matColumnDef="position">
+          <mat-header-cell *matHeaderCellDef></mat-header-cell>
+          <mat-cell *matCellDef="let element">
+            <mat-icon style="pointer-events: all;" cdkDragHandle>drag_indicator</mat-icon>
+          </mat-cell>
+        </ng-container>
+
+        <!-- Sequence Column -->
+        <ng-container matColumnDef="sequence">
+          <mat-header-cell *matHeaderCellDef> {{'51'| translate}}</mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.sequence}} </mat-cell>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <mat-header-cell *matHeaderCellDef> {{'52'| translate}} </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+        </ng-container>
+
+        <!-- Apply Column -->
+        <ng-container matColumnDef="checked">
+          <mat-header-cell *matHeaderCellDef>{{'53'| translate}}</mat-header-cell>
+          <mat-cell *matCellDef="let element">
+            <mat-checkbox [(ngModel)]="element.checked" (click)="$event.stopPropagation()" color="primary">
+            </mat-checkbox>
+          </mat-cell>
+        </ng-container>
+
+        <!-- Mandatory Column -->
+        <ng-container matColumnDef="checked1">
+          <mat-header-cell *matHeaderCellDef>{{'54'| translate}}</mat-header-cell>
+          <mat-cell *matCellDef="let element">
+            <mat-checkbox [(ngModel)]="element.checkedA" (click)="$event.stopPropagation()" color="primary">
+            </mat-checkbox>
+          </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedPersonalDetails"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedPersonalDetails;" cdkDrag [cdkDragData]="row"></mat-row>
+      </mat-table>
+      </mat-expansion-panel>
+
+       <!--Contact Information-->
+      <mat-expansion-panel #panel3>
+        <mat-expansion-panel-header>{{'44'| translate}}</mat-expansion-panel-header>
+        <mat-table #table3 [dataSource]="dataSource3" cdkDropList [cdkDropListData]="dataSource3"
+        (cdkDropListDropped)="dropTable($event,dataSource3,this.table3)">
+        <!-- Drag Column -->
+        <ng-container matColumnDef="position">
+          <mat-header-cell *matHeaderCellDef></mat-header-cell>
+          <mat-cell *matCellDef="let element">
+            <mat-icon style="pointer-events: all;" cdkDragHandle>drag_indicator</mat-icon>
+          </mat-cell>
+        </ng-container>
+
+        <!-- Sequence Column -->
+        <ng-container matColumnDef="sequence">
+          <mat-header-cell *matHeaderCellDef> {{'51'| translate}}</mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.sequence}} </mat-cell>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <mat-header-cell *matHeaderCellDef> {{'52'| translate}} </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+        </ng-container>
+
+        <!-- Apply Column -->
+        <ng-container matColumnDef="checked">
+          <mat-header-cell *matHeaderCellDef>{{'53'| translate}}</mat-header-cell>
+          <mat-cell *matCellDef="let element">
+            <mat-checkbox [(ngModel)]="element.checked" (click)="$event.stopPropagation()" color="primary">
+            </mat-checkbox>
+          </mat-cell>
+        </ng-container>
+
+        <!-- Mandatory Column -->
+        <ng-container matColumnDef="checked1">
+          <mat-header-cell *matHeaderCellDef>{{'54'| translate}}</mat-header-cell>
+          <mat-cell *matCellDef="let element">
+            <mat-checkbox [(ngModel)]="element.checkedA" (click)="$event.stopPropagation()" color="primary">
+            </mat-checkbox>
+          </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedContactInformation"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedContactInformation;" cdkDrag [cdkDragData]="row"></mat-row>
+      </mat-table>
+      </mat-expansion-panel>
+
+       <!--Emergency Contact-->
+       <mat-expansion-panel #panel4>
+        <mat-expansion-panel-header>{{'45'| translate}}</mat-expansion-panel-header>
+        <mat-table #table4 [dataSource]="dataSource4" cdkDropList [cdkDropListData]="dataSource4"
+        (cdkDropListDropped)="dropTable($event,dataSource4,this.table4)">
+        <!-- Drag Column -->
+        <ng-container matColumnDef="position">
+          <mat-header-cell *matHeaderCellDef></mat-header-cell>
+          <mat-cell *matCellDef="let element">
+            <mat-icon style="pointer-events: all;" cdkDragHandle>drag_indicator</mat-icon>
+          </mat-cell>
+        </ng-container>
+
+        <!-- Sequence Column -->
+        <ng-container matColumnDef="sequence">
+          <mat-header-cell *matHeaderCellDef> {{'51'| translate}}</mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.sequence}} </mat-cell>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <mat-header-cell *matHeaderCellDef> {{'52'| translate}} </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+        </ng-container>
+
+        <!-- Apply Column -->
+        <ng-container matColumnDef="checked">
+          <mat-header-cell *matHeaderCellDef>{{'53'| translate}}</mat-header-cell>
+          <mat-cell *matCellDef="let element">
+            <mat-checkbox [(ngModel)]="element.checked" (click)="$event.stopPropagation()" color="primary">
+            </mat-checkbox>
+          </mat-cell>
+        </ng-container>
+
+        <!-- Mandatory Column -->
+        <ng-container matColumnDef="checked1">
+          <mat-header-cell *matHeaderCellDef>{{'54'| translate}}</mat-header-cell>
+          <mat-cell *matCellDef="let element">
+            <mat-checkbox [(ngModel)]="element.checkedA" (click)="$event.stopPropagation()" color="primary">
+            </mat-checkbox>
+          </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedEmergencyContact"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedEmergencyContact;" cdkDrag [cdkDragData]="row"></mat-row>
+      </mat-table>
+      </mat-expansion-panel>
+
+      <!--Background Check-->
+      <mat-expansion-panel #panel5>
+        <mat-expansion-panel-header>{{'46'| translate}}</mat-expansion-panel-header>
+        <mat-table #table5 [dataSource]="dataSource5" cdkDropList [cdkDropListData]="dataSource5"
+        (cdkDropListDropped)="dropTable($event,dataSource5,this.table5)">
+        <!-- Drag Column -->
+        <ng-container matColumnDef="position">
+          <mat-header-cell *matHeaderCellDef></mat-header-cell>
+          <mat-cell *matCellDef="let element">
+            <mat-icon style="pointer-events: all;" cdkDragHandle>drag_indicator</mat-icon>
+          </mat-cell>
+        </ng-container>
+
+        <!-- Sequence Column -->
+        <ng-container matColumnDef="sequence">
+          <mat-header-cell *matHeaderCellDef> {{'51'| translate}}</mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.sequence}} </mat-cell>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <mat-header-cell *matHeaderCellDef> {{'52'| translate}} </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+        </ng-container>
+
+        <!-- Apply Column -->
+        <ng-container matColumnDef="checked">
+          <mat-header-cell *matHeaderCellDef>{{'53'| translate}}</mat-header-cell>
+          <mat-cell *matCellDef="let element">
+            <mat-checkbox [(ngModel)]="element.checked" (click)="$event.stopPropagation()" color="primary">
+            </mat-checkbox>
+          </mat-cell>
+        </ng-container>
+
+        <!-- Mandatory Column -->
+        <ng-container matColumnDef="checked1">
+          <mat-header-cell *matHeaderCellDef>{{'54'| translate}}</mat-header-cell>
+          <mat-cell *matCellDef="let element">
+            <mat-checkbox [(ngModel)]="element.checkedA" (click)="$event.stopPropagation()" color="primary">
+            </mat-checkbox>
+          </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedBackgroundCheck"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedBackgroundCheck;" cdkDrag [cdkDragData]="row"></mat-row>
+      </mat-table>
+      </mat-expansion-panel>
+
+    </mat-accordion>
+  </mat-card-content>
+</mat-card>
+
+<router-outlet>
+  <app-addnewfield (closePanel)="closed($event)" [ngClass]="{ 'customizer-panel': true, 'mat-elevation-z4 opened': opened }"></app-addnewfield>
+  <div #overlayDiv [ngClass]="{ 'customizer-panel-overlay': true, opened: opened }" (click)="closed()"></div>
+</router-outlet>
+

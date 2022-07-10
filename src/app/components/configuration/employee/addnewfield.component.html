@@ -1,0 +1,213 @@
+<div class="customizer-wrapper">
+  <h2 fxLayout="row wrap" fxLayoutAlign="space-between center">
+    <div fxFlex.gt-sm="50" fxFlex.gt-xs="50" fxFlex="50">
+      <span>{{'21'| translate}}</span>
+    </div>
+    <div fxFlex.gt-sm="50" fxFlex.gt-xs="50" fxFlex="50">
+      <div fxLayoutAlign="end center" fxLayoutAlign.xs="start stretch">
+        <button mat-icon-button>
+          <mat-icon>{{'97'| translate}}</mat-icon>
+        </button>
+        <button mat-icon-button (click)="closed()">
+          <mat-icon>{{'98'| translate}}</mat-icon>
+        </button>
+      </div>
+    </div>
+  </h2>
+  <div class="customizer-body">
+    <div fxLayout="row wrap">
+      <div class="matero-col field-scope" fxFlex.gt-sm="100" fxFlex="100">
+        <mat-form-field floatLabel="always">
+          <mat-label>{{'102'| translate}}</mat-label>
+          <input matInput placeholder="{{'103'| translate}}" value="">
+        </mat-form-field>
+      </div>
+
+      <div class="matero-col" fxFlex.gt-sm="100" fxFlex="100">
+        <mat-card class="add-input-scope">
+          <mat-card-content>
+            <div class="input-scope-body">
+              <div fxLayout="row wrap">
+                <div class="matero-col" fxFlex.gt-sm="30" fxFlex="100">
+                  <mat-form-field floatLabel="never" appearance="none">
+                    <input matInput placeholder="{{'104'| translate}}" value="">
+                  </mat-form-field>
+                </div>
+                <div class="matero-col" fxFlex.gt-sm="30" fxFlex="100">
+                  <mat-form-field floatLabel="never" appearance="none">
+                    <input matInput placeholder="{{'105'| translate}}" value="">
+                  </mat-form-field>
+                </div>
+                <div fxFlex.gt-sm="30" fxFlex="100">
+                  <button type="button" mat-raised-button class="text-left" (click)="openMenuList()">
+                    {{selectedValue}}
+                  </button>
+                  <!--Form Control Drop Down-->
+                  <div [ngClass]="isMenuList ? 'show-menuList':'hide-menuList'">
+                    <div fxLayout="row wrap">
+                      <div class="matero-col" fxFlex.gt-sm="50" fxFlex="100">
+                        <button mat-menu-item (click)="onSelect('108')">
+                          <mat-icon>{{'107'| translate}}</mat-icon>
+                          <span>{{'108'| translate}}</span>
+                        </button>
+                      </div>
+                      <div class="matero-col" fxFlex.gt-sm="50" fxFlex="100">
+                        <button mat-menu-item>
+                          <mat-icon>{{'109'| translate}}</mat-icon>
+                          <span>{{'110'| translate}}</span>
+                        </button>
+                      </div>
+                      <div class="matero-col" fxFlex.gt-sm="50" fxFlex="100">
+                        <button mat-menu-item>
+                          <mat-icon>{{'111'| translate}}</mat-icon>
+                          <span>{{'112'| translate}}</span>
+                        </button>
+                      </div>
+                      <div class="matero-col" fxFlex.gt-sm="50" fxFlex="100">
+                        <button mat-menu-item>
+                          <mat-icon>{{'113'| translate}}</mat-icon>
+                          <span>{{'114'| translate}}</span>
+                        </button>
+                      </div>
+                      <div class="matero-col" fxFlex.gt-sm="50" fxFlex="100">
+                        <button mat-menu-item>
+                          <mat-icon>{{'115'| translate}}</mat-icon>
+                          <span>{{'116'| translate}}</span>
+                        </button>
+                      </div>
+                      <div class="matero-col" fxFlex.gt-sm="50" fxFlex="100">
+                        <button mat-menu-item>
+                          <mat-icon>{{'117'| translate}}</mat-icon>
+                          <span>{{'118'| translate}}</span>
+                        </button>
+                      </div>
+                      <div class="matero-col" fxFlex.gt-sm="50" fxFlex="100">
+                        <button mat-menu-item>
+                          <mat-icon>{{'119'| translate}}</mat-icon>
+                          <span>{{'120'| translate}}</span>
+                        </button>
+                      </div>
+                      <div class="matero-col" fxFlex.gt-sm="50" fxFlex="100">
+                        <button mat-menu-item>
+                          <mat-icon>{{'121'| translate}}</mat-icon>
+                          <span>{{'122'| translate}}</span>
+                        </button>
+                      </div>
+                    </div>
+
+
+                  </div>
+                  <!--Ends Form Control Drop Down-->
+                </div>
+                <div fxFlex.gt-sm="10" fxFlex="100">
+                  <button type="button" mat-raised-button color="primary" (click)="add()">
+                    {{'23'| translate}}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+
+        <!--settings box-->
+        <div class="input-options" *ngIf="isOpened">
+          <mat-card>
+            <mat-card-content>
+              <div fxLayout="row wrap">
+                <div class="matero-col field-scope" fxFlex.gt-sm="90" fxFlex="100">
+                  <mat-form-field floatLabel="always">
+                    <mat-label>{{'105'| translate}}</mat-label>
+                    <input matInput placeholder="{{'103'| translate}}" value="">
+                  </mat-form-field>
+                </div>
+                <div fxFlex.gt-sm="10" fxFlex="100">
+                  <button mat-fab (click)="openSettingList()">
+                    <mat-icon>{{'123'| translate}}</mat-icon>
+                  </button>
+                </div>
+                </div>
+
+                <div [ngClass]="isSettingList ? 'show':'hide'">
+                <div fxLayout="row wrap" class="custom-background-color">
+                  <div class="matero-col field-scope" fxFlex.gt-sm="30" fxFlex="100">
+                    <mat-form-field floatLabel="always">
+                      <mat-label>{{'124'| translate}}</mat-label>
+                      <mat-select [(ngModel)]="selectedVal" placeholder="Select option">
+                        <mat-option *ngFor="let option of options" [value]="option.value">
+                          {{ option.label }}
+                        </mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                  </div>
+                  <div class="matero-col" fxFlex.gt-sm="30" fxFlex="100" class="custom-value-box">
+                    <span>{{'126'| translate}}</span>
+                    <mat-form-field floatLabel="never">
+                      <input matInput value="">
+                    </mat-form-field>
+                  </div>
+                  <div class="matero-col" fxFlex.gt-sm="40" fxFlex="100" class="custom-value-box adjust-width">
+                    <span>{{'127'| translate}}</span> <span class="position-right">{{'128'| translate}}</span>
+                    <mat-form-field floatLabel="never">
+                      <input matInput value="">
+                    </mat-form-field>
+                  </div>
+                </div>
+                </div>
+
+            </mat-card-content>
+
+          </mat-card>
+
+          <mat-card>
+            <mat-card-content>
+              <div fxLayout="row wrap">
+                <div class="matero-col field-scope" fxFlex.gt-sm="90" fxFlex="100">
+                  <mat-form-field floatLabel="always">
+                      <mat-label>{{'125'| translate}}</mat-label>
+                      <mat-select [(ngModel)]="selectedVal" placeholder="Select option">
+                        <mat-option *ngFor="let option of options" [value]="option.value">
+                          {{ option.label }}
+                        </mat-option>
+                      </mat-select>
+                    </mat-form-field>
+                </div>
+                <div fxFlex.gt-sm="10" fxFlex="100">
+                  <button mat-fab (click)="openLanguageSettingList()">
+                    <mat-icon>{{'123'| translate}}</mat-icon>
+                  </button>
+                </div>
+                </div>
+
+                <div [ngClass]="isLanguageSettingList ? 'show':'hide'">
+                <div fxLayout="row wrap" class="custom-background-color">
+                  <div class="matero-col field-scope" fxFlex.gt-sm="90" fxFlex="100">
+                    <mat-form-field floatLabel="always">
+                      <mat-label>{{'129'| translate}}</mat-label>
+                      <input matInput placeholder="{{'103'| translate}}" value="">
+                    </mat-form-field>
+                  </div>
+                  <div class="matero-col field-scope" fxFlex.gt-sm="90" fxFlex="100">
+                    <mat-form-field floatLabel="always">
+                      <mat-label>{{'130'| translate}}</mat-label>
+                      <input matInput placeholder="{{'103'| translate}}" value="">
+                    </mat-form-field>
+                  </div>
+                  <div fxFlex.gt-sm="10" fxFlex="100">
+                    <button mat-icon-button>
+                      <mat-icon class="icon-36">{{'93'| translate}}</mat-icon>
+                    </button>
+                  </div>
+                </div>
+                </div>
+
+            </mat-card-content>
+
+          </mat-card>
+        </div>
+        <!--Ends settings box-->
+      </div>
+
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,102 @@
+<h1 class="heading-h1 p-b-8">{{'33'| translate}}</h1>
+<mat-accordion>
+    <!--Basic Information-->
+    <mat-expansion-panel #panel1 [expanded]="true">
+      <mat-expansion-panel-header>{{'222'| translate}}</mat-expansion-panel-header>
+      <mat-table [dataSource]="educationDataSource">
+        <ng-container cdkColumnDef="qualification">
+          <mat-header-cell *cdkHeaderCellDef>{{'33'| translate}}</mat-header-cell>
+          <mat-cell *cdkCellDef="let row">{{row.qualification}}</mat-cell>
+        </ng-container>
+        <ng-container cdkColumnDef="degree">
+          <mat-header-cell *cdkHeaderCellDef>{{'157'| translate}}</mat-header-cell>
+          <mat-cell *cdkCellDef="let row">{{row.degree}}</mat-cell>
+        </ng-container>
+        <ng-container cdkColumnDef="passingyear">
+          <mat-header-cell *cdkHeaderCellDef>{{'224'| translate}}</mat-header-cell>
+          <mat-cell *cdkCellDef="let row">{{row.passingyear}}</mat-cell>
+        </ng-container>
+        <ng-container cdkColumnDef="duration">
+         <mat-header-cell *cdkHeaderCellDef>{{'166'| translate}}</mat-header-cell>
+         <mat-cell *cdkCellDef="let row">{{row.duration}}</mat-cell>
+       </ng-container>
+       <ng-container cdkColumnDef="marks">
+        <mat-header-cell *cdkHeaderCellDef>{{'225'| translate}}</mat-header-cell>
+        <mat-cell *cdkCellDef="let row">{{row.marks}}</mat-cell>
+      </ng-container>
+      <ng-container cdkColumnDef="subjects">
+        <mat-header-cell *cdkHeaderCellDef>{{'226'| translate}}</mat-header-cell>
+        <mat-cell *cdkCellDef="let row">{{row.subjects}}</mat-cell>
+      </ng-container>
+      <ng-container cdkColumnDef="university">
+        <mat-header-cell *cdkHeaderCellDef>{{'158'| translate}}</mat-header-cell>
+        <mat-cell *cdkCellDef="let row">{{row.university}}</mat-cell>
+      </ng-container>
+      <ng-container cdkColumnDef="collegeName">
+        <mat-header-cell *cdkHeaderCellDef>{{'228'| translate}}</mat-header-cell>
+        <mat-cell *cdkCellDef="let row">{{row.collegeName}}</mat-cell>
+      </ng-container>
+        <mat-header-row *cdkHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *cdkRowDef="let row; columns: displayedColumns;"></mat-row>
+      </mat-table>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel #panel2 [expanded]="true">
+      <mat-expansion-panel-header>{{'229'| translate}}</mat-expansion-panel-header>
+      <mat-table [dataSource]="technicalDataSource">
+        <ng-container cdkColumnDef="Skill">
+          <mat-header-cell *cdkHeaderCellDef>{{'159'| translate}}</mat-header-cell>
+          <mat-cell *cdkCellDef="let row">{{row.Skill}}</mat-cell>
+        </ng-container>
+        <ng-container cdkColumnDef="details">
+          <mat-header-cell *cdkHeaderCellDef>{{'232'| translate}}</mat-header-cell>
+          <mat-cell *cdkCellDef="let row">{{row.details}}</mat-cell>
+        </ng-container>
+        <ng-container cdkColumnDef="date">
+          <mat-header-cell *cdkHeaderCellDef>{{'233'| translate}}</mat-header-cell>
+          <mat-cell *cdkCellDef="let row">{{row.date}}</mat-cell>
+        </ng-container>
+        <ng-container cdkColumnDef="attachments">
+         <mat-header-cell *cdkHeaderCellDef>{{'176'| translate}}</mat-header-cell>
+         <mat-cell *cdkCellDef="let row"><mat-icon> {{'230'| translate}}</mat-icon> {{row.attachments}}</mat-cell>
+       </ng-container>
+       <ng-container cdkColumnDef="remarks">
+        <mat-header-cell *cdkHeaderCellDef>{{'175'| translate}}</mat-header-cell>
+        <mat-cell *cdkCellDef="let row">{{row.remarks}}</mat-cell>
+      </ng-container>
+        <mat-header-row *cdkHeaderRowDef="displayedColumns2"></mat-header-row>
+        <mat-row *cdkRowDef="let row; columns: displayedColumns2;"></mat-row>
+      </mat-table>
+    </mat-expansion-panel>
+
+    <mat-expansion-panel #panel3 [expanded]="true">
+      <mat-expansion-panel-header>{{'231'| translate}}</mat-expansion-panel-header>
+      <mat-table [dataSource]="languageDataSource">
+        <ng-container cdkColumnDef="language">
+          <mat-header-cell *cdkHeaderCellDef>{{'125'| translate}}</mat-header-cell>
+          <mat-cell *cdkCellDef="let row">{{row.language}}</mat-cell>
+        </ng-container>
+        <ng-container cdkColumnDef="read">
+          <mat-header-cell *cdkHeaderCellDef>{{'234'| translate}}</mat-header-cell>
+          <mat-cell *cdkCellDef="let row">{{row.read}}</mat-cell>
+        </ng-container>
+        <ng-container cdkColumnDef="write">
+          <mat-header-cell *cdkHeaderCellDef>{{'235'| translate}}</mat-header-cell>
+          <mat-cell *cdkCellDef="let row">{{row.write}}</mat-cell>
+        </ng-container>
+        <ng-container cdkColumnDef="speak">
+         <mat-header-cell *cdkHeaderCellDef>{{'236'| translate}}</mat-header-cell>
+         <mat-cell *cdkCellDef="let row">{{row.speak}}</mat-cell>
+       </ng-container>
+       <ng-container cdkColumnDef="primary">
+        <mat-header-cell *cdkHeaderCellDef>{{'237'| translate}}</mat-header-cell>
+        <mat-cell *cdkCellDef="let row">{{row.primary}}</mat-cell>
+      </ng-container>
+        <mat-header-row *cdkHeaderRowDef="displayedColumns3"></mat-header-row>
+        <mat-row *cdkRowDef="let row; columns: displayedColumns3;"></mat-row>
+      </mat-table>
+    </mat-expansion-panel>
+
+  </mat-accordion>
+
+
